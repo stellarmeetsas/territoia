@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stellarmeetsas.github.io/territoia/sitemap.xml
+Sitemap: https://territoia.fr/sitemap.xml

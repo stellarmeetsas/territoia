@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IA pour mairie — TerritoIA, l'application des agents, installée chez eux</title>
+    <title>IA pour mairie — TerritoIA, l’application des agents, installée chez eux</title>
     <meta
       name="description"
       content="IA pour mairie et collectivité, installée sur le serveur de la DSI. Sous 3 500 utilisateurs : 0 €. Au-dessus : 7 000 € HT par an, prix fixe. Support, mises à jour et maintenance compris."
     />
-    <link rel="canonical" href="https://stellarmeetsas.github.io/territoia/" />
-    <meta property="og:title" content="IA pour mairie — TerritoIA, l'application des agents, installée chez eux" />
-    <meta property="og:description" content="Sous 3 500 utilisateurs, TerritoIA est gratuit. Au-dessus, 7 000 € HT par an, quel que soit la taille. Installé sur le serveur de la collectivité." />
+    <link rel="canonical" href="https://territoia.fr/" />
+    <meta property="og:title" content="IA pour mairie — TerritoIA, l’application des agents, installée chez eux" />
+    <meta property="og:description" content="Sous 3 500 utilisateurs, TerritoIA est gratuit. Au-dessus, 7 000 € HT par an, quelle que soit la taille. Installé sur le serveur de la collectivité." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://stellarmeetsas.github.io/territoia/" />
+    <meta property="og:url" content="https://territoia.fr/" />
     <meta property="og:locale" content="fr_FR" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
@@ -24,7 +24,7 @@
           "@type": "Organization",
           "name": "STELLARMEET",
           "legalName": "STELLARMEET",
-          "url": "https://stellarmeetsas.github.io/territoia/",
+          "url": "https://territoia.fr/",
           "email": "contact@legalbotik.fr",
           "address": {
             "@type": "PostalAddress",
@@ -44,7 +44,7 @@
           "applicationCategory": "BusinessApplication",
           "operatingSystem": "Linux",
           "inLanguage": "fr",
-          "description": "Assistant IA des agents d'une mairie ou d'une collectivité, installé sur le serveur de la DSI.",
+          "description": "Assistant IA des agents d’une mairie ou d’une collectivité, installé sur le serveur de la DSI.",
           "offers": [
             {
               "@type": "Offer",
@@ -86,7 +86,7 @@
       <section class="hero wrap">
         <div class="hero-text">
           <h1>IA pour mairie.</h1>
-          <p class="lead">L'application des agents, sur la VM de la DSI. Une recherche, le récap du matin, la base de connaissance. Pas un callbot d'usagers.</p>
+          <p class="lead">L’application des agents, sur la machine de la collectivité. Pas un automate d’accueil des usagers.</p>
         </div>
         <figure class="app" aria-label="Fenêtre du produit : recherche, récap du matin, base de connaissance">
           <div class="app-bar">
@@ -102,13 +102,13 @@
             <p class="app-k">Récap du matin</p>
             <ol>
               <li class="line">Actualité de la collectivité</li>
-              <li class="line">Pièces de la base de savoir</li>
-              <li class="line">Notes publiées sur l'intranet</li>
+              <li class="line">Pièces de la base de connaissance</li>
+              <li class="line">Notes publiées sur l’intranet</li>
             </ol>
           </div>
           <div class="app-block">
             <p class="app-k">Base de connaissance</p>
-            <p class="kb-line"><span>Contrôle de légalité</span><span>Droit territorial, tenu par l'éditeur</span></p>
+            <p class="kb-line"><span>Contrôle de légalité</span><span>Droit territorial, tenu par l’éditeur</span></p>
           </div>
         </figure>
         <div class="hero-buy">
@@ -122,37 +122,40 @@
               <dd>7&nbsp;000&nbsp;€ <span>HT / an</span></dd>
             </div>
           </dl>
-          <p class="fine">Comptes agents, pas le nombre d'habitants. Support, mises à jour et maintenance compris. STELLARMEET fournit le logiciel et ne conserve pas les conversations ni les fichiers.</p>
+          <p class="fine">Comptes agents, pas le nombre d’habitants. Support et mises à jour compris. STELLARMEET ne conserve pas les échanges.</p>
           <div class="actions">
             <a class="btn btn-copper" href="mailto:contact@legalbotik.fr?subject=Installation%20TerritoIA">Demander une installation</a>
             <a class="quiet" href="ia-pour-mairie.html">Page IA pour mairie</a>
           </div>
         </div>
+        <figure class="hero-photo">
+          <img src="images/conseil-matin.jpg" width="1600" height="900" alt="Salle du conseil d’une mairie, au matin : longue table, chaises vides, lumière du jour par les fenêtres." />
+        </figure>
       </section>
 
       <section class="section wrap" id="installation">
         <p class="eyebrow">Côté DSI</p>
         <h2>Quatre étapes. Une VM.</h2>
-        <p class="sub">Docker et Docker Compose doivent déjà être sur la machine. Le script ne les installe pas : il s'arrête s'ils manquent.</p>
+        <p class="sub">Docker et Docker Compose doivent déjà être sur la machine. Le script ne les installe pas : il s’arrête s’ils manquent.</p>
         <div class="steps">
           <article class="glass reveal">
             <span class="num">01</span>
             <h3>Une VM Linux</h3>
-            <p>C'est le serveur de la collectivité. L'application n'est pas un logiciel à poser sur chaque poste.</p>
+            <p>C’est le serveur de la collectivité. L’application n’est pas un logiciel à poser sur chaque poste.</p>
           </article>
           <article class="glass reveal d1">
             <span class="num">02</span>
-            <h3>Le script d'installation</h3>
-            <p>Il charge l'image Docker livrée (fichier .tar) et démarre l'application avec Docker Compose. Le port par défaut est 3000, puis l'adresse interne de la mairie.</p>
+            <h3>Le script d’installation</h3>
+            <p>Il charge l’image Docker livrée (fichier .tar) et démarre l’application avec Docker Compose. Le port par défaut est 3000, puis l’adresse interne de la mairie.</p>
           </article>
           <article class="glass reveal d2">
             <span class="num">03</span>
             <h3>La clé de la mairie</h3>
-            <p>Une clé, dans les réglages, pas une par agent. Mistral peut être choisi pour une question de RGPD : hébergement européen, contrat de la collectivité. Le logiciel prend aussi en charge Claude, ChatGPT, ou un modèle local. STELLARMEET ne garde pas les échanges. L'usage d'une API est facturé par le fournisseur, sur le compte de la mairie. ChatGPT n'est pas présenté ici comme un service hébergé en Europe.</p>
+            <p>Une clé, dans les réglages, pas une par agent. Mistral peut être choisi pour une question de RGPD : hébergement européen, contrat de la collectivité. Le logiciel prend aussi en charge Claude, ChatGPT, ou un modèle local. STELLARMEET ne garde pas les échanges. L’usage d’une API est facturé par le fournisseur, sur le compte de la mairie. ChatGPT n’est pas présenté ici comme un service hébergé en Europe.</p>
           </article>
           <article class="glass reveal d3">
             <span class="num">04</span>
-            <h3>Ollama, si pas d'API externe</h3>
+            <h3>Ollama, si pas d’API externe</h3>
             <p>Une seconde VM peut porter les modèles locaux. Le script peut installer Ollama sous Linux et télécharger les modèles : comptez plusieurs minutes. Les questions restent sur cette VM.</p>
           </article>
         </div>
@@ -161,30 +164,36 @@
           <ul>
             <li>Le quota du compte (Mistral, Claude, ChatGPT ou un autre) est réparti automatiquement.</li>
             <li>Un plafond journalier est calculé pour chaque agent.</li>
-            <li>Il suit le quota réel, pour qu'un agent ne brûle pas le stock de tokens de la collectivité.</li>
+            <li>Il suit le quota réel, pour qu’un agent ne brûle pas le quota de la collectivité.</li>
           </ul>
         </aside>
       </section>
 
       <section class="section wrap" id="produit">
         <p class="eyebrow">Ce que les agents ouvrent</p>
-        <h2>La base, le web, l'intranet.</h2>
+        <h2>La base, le web, l’intranet.</h2>
         <div class="sale">
           <article class="glass reveal">
-            <h3>Base de savoir</h3>
-            <p>STELLARMEET tient à jour le socle métier : droit territorial, RH, urbanisme, marchés, finances. Des assistants cadrent la réponse, de la délibération au RIFSEEP, au PLU, au MAPA, à la DGF. La mairie y dépose ses propres pièces. Les actes d'autres communes s'ajoutent par import : le stock local n'est pas livré prérempli.</p>
+            <h3>Base de connaissance</h3>
+            <p>STELLARMEET tient à jour le socle métier : droit territorial, RH, urbanisme, marchés, finances. Des agents cadrent la réponse, de la délibération au RIFSEEP, au PLU, au MAPA, à la DGF. La mairie y dépose ses propres pièces. Les actes d’autres communes s’ajoutent par import : le stock local n’est pas livré prérempli.</p>
+            <figure class="shot">
+              <img src="images/registres.jpg" width="1600" height="900" alt="Archives d’une mairie : registres reliés sur des étagères de bois, dossiers fermés sur une table, lumière d’une fenêtre." />
+            </figure>
           </article>
           <article class="glass reveal d1">
             <h3>Moteur de recherche</h3>
-            <p>Une question interroge le web et la base en même temps. La recherche web ne remplace pas les notes, les règlements ni les actes indexés. L'agent relit avant d'agir.</p>
+            <p>Une question interroge le web et la base en même temps. La recherche web ne remplace pas les notes, les règlements ni les actes indexés. L’agent relit avant d’agir.</p>
           </article>
           <article class="glass reveal d2">
             <h3>Actualités de la collectivité</h3>
-            <p>Le fil est rangé pour une mairie : État, droit, finances locales, RH, urbanisme, marchés, environnement, numérique, et son territoire. Ce n'est pas un flux généraliste.</p>
+            <p>Le fil est rangé pour une mairie : État, droit, finances locales, RH, urbanisme, marchés, environnement, numérique, et son territoire. Ce n’est pas un flux généraliste.</p>
           </article>
           <article class="glass reveal d3">
             <h3>Intranet de publication</h3>
             <p>Inclus dans la licence. La communication publie règlements, notes et accueil des agents. Rubriques prévues : accueil, règlements, RH, bâtiment, vie des services. Un article publié entre dans la base et peut être cité dans la réponse.</p>
+            <figure class="shot">
+              <img src="images/agents-dossier.jpg" width="1600" height="900" alt="Trois agents dans un bureau de mairie, autour d’un dossier papier, lumière naturelle, visages de profil ou de dos." />
+            </figure>
           </article>
         </div>
       </section>
@@ -194,14 +203,17 @@
           <div>
             <p class="eyebrow">Chaque matin</p>
             <h2>Le récap est déjà composé.</h2>
-            <p>L'écran d'accueil croise l'actualité de la collectivité, les pièces de la base de savoir, et les articles publiés sur l'intranet. L'agent n'a pas à ouvrir un outil par sujet.</p>
+            <p>L’écran d’accueil croise l’actualité de la collectivité, les pièces de la base de connaissance, et les articles publiés sur l’intranet. L’agent n’a pas à ouvrir un outil par sujet.</p>
           </div>
           <ol>
-            <li><strong>L'actualité</strong> du territoire et des textes qui le concernent.</li>
-            <li><strong>La base</strong> : métiers tenus par l'éditeur, pièces déposées par la mairie.</li>
-            <li><strong>L'intranet</strong> : ce que la communication a publié pour les agents.</li>
+            <li><strong>L’actualité</strong> du territoire et des textes qui le concernent.</li>
+            <li><strong>La base</strong> : métiers tenus par l’éditeur, pièces déposées par la mairie.</li>
+            <li><strong>L’intranet</strong> : ce que la communication a publié pour les agents.</li>
           </ol>
         </div>
+        <figure class="shot">
+          <img src="images/recap-matin.jpg" width="1600" height="900" alt="Bureau de mairie au matin : écran allumé sans texte lisible, dossier fermé, fenêtre et lumière du jour." />
+        </figure>
       </section>
 
       <section class="section wrap" id="donnees">
@@ -211,11 +223,11 @@
         <div class="path">
           <article class="glass reveal">
             <strong>Le poste</strong>
-            <p>L'agent pose sa question dans le navigateur, sur l'adresse interne.</p>
+            <p>L’agent pose sa question dans le navigateur, sur l’adresse interne.</p>
           </article>
           <article class="glass reveal d1">
             <strong>Le serveur</strong>
-            <p>Comptes, conversations, base de savoir et intranet restent dans le volume Docker de la DSI.</p>
+            <p>Comptes, conversations, base de connaissance et intranet restent dans le volume Docker de la DSI.</p>
           </article>
           <article class="glass reveal d2">
             <strong>Le modèle</strong>
@@ -239,12 +251,12 @@
                 <p class="price">7&nbsp;000&nbsp;€ <small>HT / an</small></p>
               </article>
             </div>
-            <p>Sous 3&nbsp;500 utilisateurs, 0&nbsp;€. Au-dessus, 7&nbsp;000&nbsp;€ HT par an, et ce prix ne change pas avec la taille. Support, mises à jour et maintenance compris. STELLARMEET fournit le logiciel et ne conserve pas les conversations ni les fichiers : ils restent sur le serveur de la collectivité. L'usage d'une API, s'il y en a une, est payé par la collectivité sur son compte.</p>
+            <p>Sous 3&nbsp;500 utilisateurs, 0&nbsp;€. Au-dessus, 7&nbsp;000&nbsp;€ HT par an, et ce prix ne change pas avec la taille. Support, mises à jour et maintenance compris. STELLARMEET fournit le logiciel et ne conserve pas les conversations ni les fichiers : ils restent sur le serveur de la collectivité. L’usage d’une API, s’il y en a une, est payé par la collectivité sur son compte.</p>
           </div>
           <ul class="ticks reveal d2">
-            <li>Base de savoir, recherche, actualités, intranet</li>
+            <li>Base de connaissance, recherche, actualités, intranet</li>
             <li>Récap du matin pour les agents</li>
-            <li>Image Docker et script d'installation</li>
+            <li>Image Docker et script d’installation</li>
             <li>Support, mises à jour et maintenance compris</li>
           </ul>
         </div>
@@ -257,17 +269,17 @@
           <a class="glass reveal" href="blog/assistant-ia-mairie.html">
             <p class="k">12 novembre 2026</p>
             <h3>Assistant IA pour une mairie</h3>
-            <p>L'outil des agents, installé sur leur serveur. Pas le chatbot collé sur le site municipal.</p>
+            <p>L’outil des agents, installé sur leur serveur. Pas le chatbot collé sur le site municipal.</p>
           </a>
           <a class="glass reveal d1" href="blog/base-de-connaissance-territoriale.html">
             <p class="k">12 novembre 2026</p>
             <h3>Base de connaissance territoriale</h3>
-            <p>Ce que l'éditeur tient à jour, et ce que la mairie doit déposer elle-même.</p>
+            <p>Ce que l’éditeur tient à jour, et ce que la mairie doit déposer elle-même.</p>
           </a>
           <a class="glass reveal d2" href="blog/installation-dsi.html">
             <p class="k">12 novembre 2026</p>
             <h3>Installation et plafond journalier</h3>
-            <p>VM Linux, script, clé de la mairie, Ollama en local, quota pour ne pas brûler les tokens.</p>
+            <p>VM Linux, script, clé de la mairie, Ollama en local, pour ne pas épuiser le quota.</p>
           </a>
         </div>
         <p class="fine"><a href="blog/index.html">Tous les articles</a></p>
@@ -276,9 +288,9 @@
       <section class="section wrap">
         <div class="contact glass reveal">
           <p class="eyebrow">Contact</p>
-          <h2>Parler d'une installation.</h2>
-          <p>Écrivez à <a href="mailto:contact@legalbotik.fr">contact@legalbotik.fr</a> avec le nom de la collectivité et le nombre d'agents concernés.</p>
-          <a class="btn btn-copper" href="mailto:contact@legalbotik.fr?subject=Installation%20TerritoIA">Écrire à STELLARMEET</a>
+          <h2>Parler d’une installation.</h2>
+          <p>Écrivez à <a href="mailto:contact@legalbotik.fr">contact@legalbotik.fr</a> avec le nom de la collectivité et le nombre d’agents concernés.</p>
+          <a class="btn btn-copper" href="mailto:contact@legalbotik.fr?subject=Installation%20TerritoIA">Nous écrire</a>
         </div>
       </section>
     </main>
