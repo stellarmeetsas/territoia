@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stellarmeetsas.github.io/territoia/sitemap.xml
