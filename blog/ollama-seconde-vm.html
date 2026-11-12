@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À quoi sert la seconde VM Ollama</title>
+    <meta name="description" content="Sans API externe, une seconde VM peut exécuter les modèles. Les questions ne quittent pas ce périmètre. L’agent relit quand même." />
+    <link rel="canonical" href="https://territoia.fr/blog/ollama-seconde-vm.html" />
+    <meta property="og:title" content="À quoi sert la seconde VM Ollama" />
+    <meta property="og:description" content="Sans API externe, une seconde VM peut exécuter les modèles. Les questions ne quittent pas ce périmètre. L’agent relit quand même." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/ollama-seconde-vm.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Ollama porte les modèles locaux sur une autre machine. Le téléchargement prend du temps. La relecture reste","datePublished":"2026-11-12","inLanguage":"fr","description":"Sans API externe, une seconde VM peut exécuter les modèles. Les questions ne quittent pas ce périmètre. L’agent relit quand même.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/ollama-seconde-vm.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Modèles et hébergement</p>
+        <h1>Ollama porte les modèles locaux sur une autre machine. Le téléchargement prend du temps. La relecture reste</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>Si la collectivité ne veut pas d’API externe, TerritoIA peut s’appuyer sur une seconde VM où le script installe Ollama et télécharge les modèles. Ce téléchargement prend plusieurs minutes, parfois bien davantage selon le modèle et le débit. Les questions sont traitées sur ce périmètre local. Cela ne rend pas les réponses exactes, ni signées, ni opposables aux habitants. L’agent relit. STELLARMEET ne conserve pas les échanges, qui restent sur les machines de la commune. Le maire ne signe rien par ce biais.</p>
+        <h2>Deux machines, deux rôles</h2>
+        <p>La VM de l’application tient les comptes, les fils, la base, l’intranet. La VM Ollama tient le modèle. La DSI documente les adresses internes et qui sauvegarde quoi. Sauvegarder l’une sans l’autre laisse soit des comptes sans modèle, soit un modèle sans les dossiers. Elle relit le plan de sauvegarde : il est celui de la commune, pas un engagement de l’éditeur à garder une copie.</p>
+        <p>Le réseau entre les deux VM reste interne. Ouvrir la VM du modèle vers l’internet « pour mettre à jour plus vite » se décide explicitement, pas par défaut de configuration non lue.</p>
+        <h2>Limites d’un modèle local</h2>
+        <p>Un modèle local peut être moins à jour sur un texte publié le matin. L’agent le sait parce que la charte le dit, et parce qu’il ouvre le texte officiel à côté. La DSI ne vend pas Ollama au DGS comme un juriste interne. Elle le présente comme un moteur local, avec un coût de machine et de temps de téléchargement, sans facture d’API.</p>
+        <p>Le plafond journalier existe aussi dans ce montage, pour que l’usage reste soutenable sur la machine. La DSI relit la charge après les premières semaines. Un service qui trouve les réponses faibles ne « complète » pas en rouvrant des comptes personnels.</p>
+        <h2>Public</h2>
+        <p>Les habitants n’ont pas d’accès à ces VM. L’adresse de l’application est celle des agents. Ce n’est pas le site municipal et pas un standard. Le maire n’utilise pas Ollama pour signer un arrêté.</p>
+        <p>La DSI note la date des modèles téléchargés. Elle relit cette date quand un agent dit que « le modèle ne sait pas » une réforme récente : la réponse peut être de mettre à jour le modèle, pas de lui faire confiance quand même. Support et mises à jour du logiciel TerritoIA restent compris. Ils ne choisissent pas le modèle à la place de la DSI.</p>
+        <p>La DSI note l’espace disque avant et après le téléchargement du modèle, et le temps réellement passé. Elle relit ces deux chiffres le jour où quelqu’un propose un modèle plus lourd. Une VM trop juste ne se « débrouille » pas en silence. Les agents ne lancent pas eux-mêmes un autre modèle sur un poste. L’adresse interne ne change pas. Ce n’est pas un accueil du public. Le maire ne signe pas les téléchargements. La sauvegarde inclut la VM du modèle, et la DSI le vérifie dans le plan.</p>
+        <p>Rubrique <a href="modeles/index.html">Modèles et hébergement</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="cle-unique-reglages.html">Pourquoi une seule clé dans les réglages</a></li>
+          <li><a href="quota-api-et-licence.html">Quelle différence entre le quota du modèle et la licence du logiciel</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

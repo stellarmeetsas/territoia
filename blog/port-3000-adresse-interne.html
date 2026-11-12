@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Le port 3000 reste une adresse interne</title>
+    <meta name="description" content="L’application écoute sur le port 3000 de la VM. La DSI publie une adresse interne, pas une page du site municipal." />
+    <link rel="canonical" href="https://territoia.fr/blog/port-3000-adresse-interne.html" />
+    <meta property="og:title" content="Le port 3000 reste une adresse interne" />
+    <meta property="og:description" content="L’application écoute sur le port 3000 de la VM. La DSI publie une adresse interne, pas une page du site municipal." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/port-3000-adresse-interne.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Le port 3000 de TerritoIA reste une adresse interne","datePublished":"2026-11-12","inLanguage":"fr","description":"L’application écoute sur le port 3000 de la VM. La DSI publie une adresse interne, pas une page du site municipal.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/port-3000-adresse-interne.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Installation par la DSI</p>
+        <h1>Le port 3000 de TerritoIA reste une adresse interne</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>Après installation, l’application répond sur le port 3000 de la machine. La DSI donne aux agents une adresse interne, éventuellement derrière son propre proxy. Cette adresse ne figure pas sur le site de la commune.</p>
+        <h2>Adresse que les agents retiennent</h2>
+        <p>Un nom interne stable vaut mieux qu’une IP collée dans un courriel. La DSI le choisit, elle le fait résoudre sur le réseau de la collectivité, et elle le met dans les favoris ou l’intranet. Elle relit que ce nom ne sort pas sur Internet.</p>
+        <h2>Ce que l’on n’ouvre pas</h2>
+        <p>On n’ouvre pas le port vers le public, vers le wifi invité ni vers un formulaire habitants. TerritoIA n’est pas un accueil des usagers. Un test « depuis mon téléphone perso » qui réussit est un défaut de cloisonnement, pas une bonne nouvelle.</p>
+        <h2>Signature</h2>
+        <p>Le maire ne signe pas les textes préparés dans l’outil parce que le port répond. La réponse reste un brouillon relu. La DSI note dans le journal le nom interne et le port, sans y coller de capture de dossier.</p>
+        <p>Quand le certificat interne est posé, la DSI vérifie l’avertissement du navigateur depuis un poste agent, pas depuis une machine hors réseau. Elle relit que l’avertissement a disparu. Un contournement « cliquez quand même » ne s’écrit pas dans la consigne.</p>
+        <p>La DSI dessine le chemin réel : poste de l’agent, éventuellement proxy interne, VM, port 3000. Elle note ce chemin en trois lignes, pas en un schéma décoratif. Si un pare-feu intermédiaire existe, la règle est nominative et datée. Une règle « any » ouverte le temps d’une démo se ferme avant que les agents reçoivent le favori. Elle relit la règle le lendemain, pas seulement le soir même où tout le monde est pressé.</p>
+        <p>Le certificat, s’il est interne, est celui de la collectivité. On n’apprend pas aux agents à cliquer sur l’avertissement du navigateur. La DSI fait l’essai depuis un poste type, avec le compte d’un agent volontaire, puis elle retire ce qu’il a pu taper. Ce n’était pas un dossier. Les habitants ne font pas cet essai. Leur navigateur ne doit pas résoudre le nom.</p>
+        <p>Quand un élu demande l’adresse sur son téléphone personnel, la réponse est le réseau distant déjà cadré par la DSI, ou pas d’accès. On n’ouvre pas le port pour un appareil. TerritoIA n’est pas un accueil des usagers. Le maire ne signe pas depuis cette adresse. L’agent qui prépare un texte le relit dans le service, hors de l’écran s’il le faut, avant que le circuit de signature habituel s’en saisisse.</p>
+        <p>Le favori diffusé aux agents porte le nom, pas l’adresse IP et le port en clair. La DSI relit le favori sur un poste du secrétariat. Un favori bricolé vers l’IP se retire. Le port 3000 reste un détail d’exploitation, pas une consigne affichée.</p>
+        <p>Rubrique <a href="installation/index.html">Installation par la DSI</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="sauvegarde-vm-dsi.html">La sauvegarde de la VM reste à la DSI</a></li>
+          <li><a href="comptes-agents-pas-habitants.html">Les comptes ouverts sont ceux des agents</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

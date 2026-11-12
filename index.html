@@ -72,13 +72,10 @@
     <header class="nav">
       <a class="brand" href="index.html"><img src="favicon.svg" alt="" /> TerritoIA</a>
       <nav class="nav-links" aria-label="Principal">
-        <a href="#installation">Installation</a>
-        <a href="#produit">Produit</a>
-        <a href="#matin">Matin</a>
-        <a href="blog/index.html">Blog</a>
-        <a href="#licence">Licence</a>
-        <a href="mentions-legales.html">Mentions</a>
-        <a class="btn btn-copper" href="mailto:contact@legalbotik.fr">Écrire</a>
+        <a href="index.html#produit">Produit</a>
+        <a href="blog/index.html">Journal</a>
+        <a href="index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
       </nav>
     </header>
 
@@ -251,26 +248,62 @@
       </section>
 
       <section class="section wrap" id="lire">
-        <p class="eyebrow">À lire</p>
-        <h2>Le détail, article par article.</h2>
-        <div class="reads">
-          <a class="glass reveal" href="blog/assistant-ia-mairie.html">
-            <p class="k">12 novembre 2026</p>
-            <h3>Assistant IA pour une mairie</h3>
-            <p>L’outil des agents, installé sur leur serveur. Pas le chatbot collé sur le site municipal.</p>
+        <p class="eyebrow">Journal</p>
+        <h2>Dix rubriques.</h2>
+        <p class="sub">Les articles sont rangés par sujet. Cette page ne liste pas chaque note.</p>
+        <div class="catalog">
+          <a class="glass" href="blog/actes/index.html">
+            <p class="k">Actes</p>
+            <h2>Actes et contrôle de légalité</h2>
+            <p>Une délibération votée, un arrêté signé sur le papier, un bordereau encore vide : le secrétariat vit dans cet intervalle. Le contrôle de légalité ne commence pas dans l’assistant. Il commence quand l’acte qui doit être transmis part vers le représentant de l’État, et quand la publicité qui rend l’acte opposable a vraiment eu lieu.</p>
           </a>
-          <a class="glass reveal d1" href="blog/base-de-connaissance-territoriale.html">
-            <p class="k">12 novembre 2026</p>
-            <h3>Base de connaissance territoriale</h3>
-            <p>Ce que l’éditeur tient à jour, et ce que la mairie doit déposer elle-même.</p>
+          <a class="glass" href="blog/urbanisme/index.html">
+            <p class="k">Urbanisme</p>
+            <h2>Urbanisme et droit des sols</h2>
+            <p>L’urbanisme communal se joue sur des pièces datées : le règlement en vigueur, le plan, le dossier du pétitionnaire, les avis demandés. Un assistant qui n’a pas ces pièces sous les yeux ne peut pas dire si un projet est admis. Il peut aider l’instructeur à formuler la question et à lister ce qui manque.</p>
           </a>
-          <a class="glass reveal d2" href="blog/installation-dsi.html">
-            <p class="k">12 novembre 2026</p>
-            <h3>Installation et plafond journalier</h3>
-            <p>VM Linux, script, clé de la mairie, Ollama en local, pour ne pas épuiser le quota.</p>
+          <a class="glass" href="blog/marches/index.html">
+            <p class="k">Marchés</p>
+            <h2>Marchés publics</h2>
+            <p>Un marché se gagne ou se perd sur des pièces que l’acheteur assume : besoin, allotissement, publicité, critères, rapport d’analyse. Les seuils bougent. Les coller dans un article comme s’ils étaient éternels serait une erreur, et les coller dans un chat comme s’ils dispensaient d’ouvrir le code aussi.</p>
+          </a>
+          <a class="glass" href="blog/rh/index.html">
+            <p class="k">RH</p>
+            <h2>Ressources humaines</h2>
+            <p>Les questions RH des communes sont encadrées par des délibérations locales et par le statut. L’assistant peut rappeler la différence entre une délibération qui crée un régime et un acte qui l’applique à une personne. Il ne fixe pas un montant, ne propose pas un tableau d’avancement et ne rédige pas une sanction.</p>
+          </a>
+          <a class="glass" href="blog/finances/index.html">
+            <p class="k">Finances</p>
+            <h2>Finances locales</h2>
+            <p>La DGF n’est pas une subvention de projet, le FCTVA n’est pas une ligne que l’on devine, la DETR n’est pas acquise le jour où l’on rédige la lettre. Le service des finances le sait. Le risque, avec un assistant, est de lui demander un chiffre de commune qu’aucune pièce déposée ne contient.</p>
+          </a>
+          <a class="glass" href="blog/modeles/index.html">
+            <p class="k">Modèles</p>
+            <h2>Modèles et hébergement</h2>
+            <p>TerritoIA tourne sur une VM de la collectivité. La clé d’API, s’il y en a une, est celle de la mairie, saisie dans les réglages. Mistral peut être retenu quand l’hébergement européen et le contrat au nom de la collectivité sont le critère. Claude et ChatGPT sont utilisables si la DSI a conclu ce qu’il faut avec ces fournisseurs. Une seconde VM peut porter Ollama.</p>
+          </a>
+          <a class="glass" href="blog/produit/index.html">
+            <p class="k">Produit</p>
+            <h2>Base, intranet, récap</h2>
+            <p>L’écran d’accueil croise l’actualité rangée pour une collectivité, les pièces de la base et les notes publiées sur l’intranet. Une note publiée peut être citée. Une note absente ne se reconstitue pas. Le socle métier est tenu à jour par l’éditeur. Les règlements, délibérations et actes propres à la commune sont déposés par elle. Le stock local n’arrive pas prérempli.</p>
+          </a>
+          <a class="glass" href="blog/metiers/index.html">
+            <p class="k">Services</p>
+            <h2>Journée des services</h2>
+            <p>Le secrétariat, les RH, l’urbanisme, les marchés, les finances, la communication, le cabinet, le CCAS, la police municipale et l’état civil n’ouvrent pas le même dossier le matin. Une note qui servirait les dix en changeant le nom du service serait vide. Ici, chaque texte reste dans une scène : un ordre du jour, une aide facultative, une main courante qu’il ne faut pas coller, un livret que l’outil ne signe pas.</p>
+          </a>
+          <a class="glass" href="blog/outils/index.html">
+            <p class="k">Voisins</p>
+            <h2>Un outil voisin</h2>
+            <p>Le marché mêle des chatbots d’accueil, des bases de démarches, des éditeurs de fiches et des plateformes de rédaction. TerritoIA n’est pas ces produits. Cette rubrique ne les note pas et ne recopie pas leurs pages. Chaque note pose d’abord une question de service, puis situe un seul outil, d’après ce que ses pages publiques décrivent, et dit la différence utile pour une DSI.</p>
+          </a>
+          <a class="glass" href="blog/installation/index.html">
+            <p class="k">DSI</p>
+            <h2>Installation par la DSI</h2>
+            <p>L’installation tient en une machine Linux que la collectivité administre. Docker et Docker Compose doivent déjà être là : le script s’arrête s’ils manquent. Il charge l’image livrée et démarre l’application. Le port par défaut est 3000, ensuite l’adresse interne. Ce n’est pas un logiciel à poser sur chaque poste, ni un robot publié sur le site de la ville.</p>
           </a>
         </div>
-        <p class="fine"><a href="blog/index.html">Tous les articles</a></p>
+        <p class="fine"><a href="blog/index.html">Ouvrir le journal</a></p>
       </section>
 
       <section class="section wrap">
@@ -285,19 +318,7 @@
 
     <footer class="footer">
       <div class="wrap">
-        <div>
-          <strong>TerritoIA</strong> · STELLARMEET, SAS · SIREN 935 065 094<br />
-          25 rue de Ponthieu, 75008 Paris
-        </div>
-        <nav aria-label="Informations légales">
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="confidentialite.html">Confidentialité</a>
-          <a href="dpa.html">DPA</a>
-          <a href="cookies.html">Cookies</a>
-          <a href="blog/index.html">Blog</a>
-          <a href="ia-pour-mairie.html">IA pour mairie</a>
-          <a href="https://legalbotik.fr">LegalBotik</a>
-        </nav>
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="dpa.html">DPA</a> · <a href="cookies.html">Cookies</a></p>
       </div>
     </footer>
     <script src="motion.js"></script>

@@ -7,7 +7,7 @@
     <meta name="description" content="Les agents collent déjà des dossiers dans des chats personnels. TerritoIA propose une recherche interne : web et base de la collectivité, avec la clé de la mairie." />
     <link rel="canonical" href="https://territoia.fr/blog/recherche-alternative-chatgpt.html" />
     <meta property="og:title" content="Alternative à ChatGPT en mairie : chercher dans le web et dans la base" />
-    <meta property="og:description" content="Une recherche pour les agents, sur le serveur de la collectivité, avec la clé de la mairie. ChatGPT reste possible, sans promesse d'hébergement européen." />
+    <meta property="og:description" content="Une recherche pour les agents, sur le serveur de la collectivité, avec la clé de la mairie. ChatGPT reste possible, sans promesse d’hébergement européen." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://territoia.fr/blog/recherche-alternative-chatgpt.html" />
     <meta property="og:locale" content="fr_FR" />
@@ -22,12 +22,10 @@
     <header class="nav">
       <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
       <nav class="nav-links" aria-label="Principal">
-        <a href="../index.html#installation">Installation</a>
         <a href="../index.html#produit">Produit</a>
-        <a href="index.html">Blog</a>
+        <a href="index.html">Journal</a>
         <a href="../index.html#licence">Licence</a>
-        <a href="../mentions-legales.html">Mentions</a>
-        <a class="btn btn-copper" href="mailto:contact@legalbotik.fr">Écrire</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
       </nav>
     </header>
     <main id="contenu" class="wrap section">
@@ -35,51 +33,45 @@
         <p class="eyebrow">Alternative ChatGPT mairie</p>
         <h1>Chercher sans coller le dossier dans un chat personnel</h1>
         <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
-        <p>L'alternative à ChatGPT en mairie n'est pas un interdit affiché dans un couloir. Les agents s'en servent déjà, souvent sans que la DSI ait choisi le compte, le modèle ni ce qui a le droit de sortir. Les textes de la Banque des Territoires sur l'usage non encadré le disent clairement : la charte vient après le constat, pas avant. TerritoIA part de ce constat. Il offre une adresse interne où la recherche passe par la clé de la collectivité, et où la question interroge à la fois le web et la base locale.</p>
-        <p>ChatGPT peut rester le modèle, si la DSI le branche avec sa propre clé. Ce n'est pas alors un contournement : c'est un choix assumé. Ce choix ne s'accompagne d'aucune promesse d'hébergement européen. Mistral peut être préféré précisément pour cette raison : hébergement européen, contrat passé par la collectivité. Claude est également pris en charge. Une VM Ollama garde le modèle sur le réseau de la mairie. STELLARMEET ne conserve pas les échanges.</p>
+        <p>L’alternative à ChatGPT en mairie n’est pas un interdit affiché dans un couloir. Les agents s’en servent déjà, souvent sans que la DSI ait choisi le compte, le modèle ni ce qui a le droit de sortir. Les textes de la Banque des Territoires sur l’usage non encadré le disent clairement : la charte vient après le constat, pas avant. TerritoIA part de ce constat. Il offre une adresse interne où la recherche passe par la clé de la collectivité, et où la question interroge à la fois le web et la base locale.</p>
+        <p>ChatGPT peut rester le modèle, si la DSI le branche avec sa propre clé. Ce n’est pas alors un contournement : c’est un choix assumé. Ce choix ne s’accompagne d’aucune promesse d’hébergement européen. Mistral peut être préféré précisément pour cette raison : hébergement européen, contrat passé par la collectivité. Claude est également pris en charge. Une VM Ollama garde le modèle sur le réseau de la mairie. STELLARMEET ne conserve pas les échanges.</p>
 
-        <h2>Ce que le web sait faire, et ce qu'il ne sait pas</h2>
-        <p>Le moteur interroge le web pour les textes et les actualités qui ne sont pas dans les classeurs de la commune : un article de code, une page d'un ministère, une dépêche sur les finances locales. La recherche web est un outil de l'instance, activé par la DSI, pas un onglet ouvert sur le poste personnel de l'agent. Elle ne remplace pas une note de service, un règlement intérieur ou un acte que la mairie a indexé.</p>
-        <p>Une bonne réponse mêle les deux quand les deux existent. L'agent voit une piste générale et, si la pièce locale est là, le fragment qui concerne sa commune. S'il n'y a pas de pièce locale, le texte doit le laisser voir, pour éviter qu'un rappel général soit pris pour une délibération du conseil.</p>
+        <h2>Ce que le web sait faire, et ce qu’il ne sait pas</h2>
+        <p>Le moteur interroge le web pour les textes et les actualités qui ne sont pas dans les classeurs de la commune : un article de code, une page d’un ministère, une dépêche sur les finances locales. La recherche web est un outil de l’instance, activé par la DSI, pas un onglet ouvert sur le poste personnel de l’agent. Elle ne remplace pas une note de service, un règlement intérieur ou un acte que la mairie a indexé.</p>
+        <p>Une bonne réponse mêle les deux quand les deux existent. L’agent voit une piste générale et, si la pièce locale est là, le fragment qui concerne sa commune. S’il n’y a pas de pièce locale, le texte doit le laisser voir, pour éviter qu’un rappel général soit pris pour une délibération du conseil.</p>
 
         <h2>La clé, le quota, le serveur</h2>
-        <p>La clé est saisie dans les réglages de l'instance, une fois, pour la collectivité. Elle n'est pas recopiée agent par agent. L'usage d'une API est facturé par le fournisseur, sur le compte de la mairie. Le quota de ce compte est réparti automatiquement. Un plafond journalier est calculé pour chaque agent, à partir du quota réel, afin qu'une série de questions longues ne vide pas le stock de tokens avant la fin du mois.</p>
-        <p>Les conversations et les fichiers restent dans le volume Docker de la VM Linux. STELLARMEET fournit le logiciel, les mises à jour et le support. Il n'héberge pas ce volume. Aucune certification n'est affichée pour habiller ce partage de responsabilités : le contrat et la clé sont ceux de la collectivité, le logiciel est celui de l'éditeur.</p>
+        <p>La clé est saisie dans les réglages de l’instance, une fois, pour la collectivité. Elle n’est pas recopiée agent par agent. L’usage d’une API est facturé par le fournisseur, sur le compte de la mairie. Le quota de ce compte est réparti automatiquement. Un plafond journalier est calculé pour chaque agent, à partir du quota réel, afin qu’une série de questions longues ne vide pas le stock de tokens avant la fin du mois.</p>
+        <p>Les conversations et les fichiers restent dans le volume Docker de la VM Linux. STELLARMEET fournit le logiciel, les mises à jour et le support. Il n’héberge pas ce volume. Aucune certification n’est affichée pour habiller ce partage de responsabilités : le contrat et la clé sont ceux de la collectivité, le logiciel est celui de l’éditeur.</p>
 
         <h2>Exemples de recherches, service par service</h2>
-        <p>Le secrétariat peut chercher le régime de transmission des actes au contrôle de légalité, puis demander si la dernière note interne sur le circuit de signature est dans la base. Les RH peuvent chercher le cadre d'un recrutement de contractuel sur des sources ouvertes, sans y joindre le curriculum d'une personne nommément désignée. L'urbanisme peut chercher un délai d'instruction et le rapprocher de l'extrait de PLU déposé par le service.</p>
-        <p>Le service des marchés peut chercher un seuil ou un critère, puis ouvrir le guide d'achat de la collectivité s'il a été indexé. Les finances peuvent chercher une définition de la DGF ou du FCTVA et demander ensuite ce que la dernière note budgétaire de la commune en dit. La communication peut chercher le vocabulaire d'un dispositif national avant de réécrire un paragraphe du magazine, à partir du seul texte validé en interne.</p>
-        <p>Dans tous ces cas, la recherche prépare. Elle ne signe pas, elle n'instruit pas un dossier à la place de l'agent, et elle ne garantit pas qu'un recours sera écarté. L'agent relit, et il écarte ce qui ne correspond pas au dossier qu'il a sur la table.</p>
+        <p>Le secrétariat peut chercher le régime de transmission des actes au contrôle de légalité, puis demander si la dernière note interne sur le circuit de signature est dans la base. Les RH peuvent chercher le cadre d’un recrutement de contractuel sur des sources ouvertes, sans y joindre le curriculum d’une personne nommément désignée. L’urbanisme peut chercher un délai d’instruction et le rapprocher de l’extrait de PLU déposé par le service.</p>
+        <p>Le service des marchés peut chercher un seuil ou un critère, puis ouvrir le guide d’achat de la collectivité s’il a été indexé. Les finances peuvent chercher une définition de la DGF ou du FCTVA et demander ensuite ce que la dernière note budgétaire de la commune en dit. La communication peut chercher le vocabulaire d’un dispositif national avant de réécrire un paragraphe du magazine, à partir du seul texte validé en interne.</p>
+        <p>Dans tous ces cas, la recherche prépare. Elle ne signe pas, elle n’instruit pas un dossier à la place de l’agent, et elle ne garantit pas qu’un recours sera écarté. L’agent relit, et il écarte ce qui ne correspond pas au dossier qu’il a sur la table.</p>
 
         <h2>Ollama quand la DSI refuse une API</h2>
-        <p>Si la collectivité ne veut pas qu'une question sorte vers un fournisseur, la voie prévue est une seconde VM, ou la même machine, avec Ollama. Le script d'installation peut installer Ollama sous Linux et télécharger les modèles. Ce téléchargement prend plusieurs minutes : ce n'est pas une bascule instantanée. Les questions restent alors sur cette VM. Le web, s'il reste activé, est un autre flux : la DSI décide s'il est ouvert.</p>
-        <p>Cette option ne supprime pas le travail de relecture. Un modèle local peut se tromper avec autant d'assurance qu'un modèle distant. La différence est le lieu du calcul et l'absence de facture d'API, pas une exactitude supérieure décrétée à l'avance.</p>
+        <p>Si la collectivité ne veut pas qu’une question sorte vers un fournisseur, la voie prévue est une seconde VM, ou la même machine, avec Ollama. Le script d’installation peut installer Ollama sous Linux et télécharger les modèles. Ce téléchargement prend plusieurs minutes : ce n’est pas une bascule instantanée. Les questions restent alors sur cette VM. Le web, s’il reste activé, est un autre flux : la DSI décide s’il est ouvert.</p>
+        <p>Cette option ne supprime pas le travail de relecture. Un modèle local peut se tromper avec autant d’assurance qu’un modèle distant. La différence est le lieu du calcul et l’absence de facture d’API, pas une exactitude supérieure décrétée à l’avance.</p>
 
-        <p>La DSI peut documenter ce choix dans sa charte sans attendre que l'outil l'écrive à sa place. TerritoIA fournit l'adresse, la clé unique et le plafond. Le texte de la charte, lui, reste une décision de la collectivité : quelles questions sont autorisées, quelles pièces ne sortent pas, qui relit avant un envoi au préfet ou à un candidat.</p>
+        <p>La DSI peut documenter ce choix dans sa charte sans attendre que l’outil l’écrive à sa place. TerritoIA fournit l’adresse, la clé unique et le plafond. Le texte de la charte, lui, reste une décision de la collectivité : quelles questions sont autorisées, quelles pièces ne sortent pas, qui relit avant un envoi au préfet ou à un candidat.</p>
 
         <aside class="box">
           <h2>Encadré produit</h2>
-          <p>TerritoIA, par STELLARMEET, tourne sur le serveur de la collectivité. Gratuit sous 3&nbsp;500 utilisateurs, puis 7&nbsp;000&nbsp;€ HT par an. Support compris : installation, mises à jour, aide à la DSI. Recherche web et base locale. Clé de la mairie. Mistral possible pour le RGPD et l'hébergement européen. Claude, ChatGPT ou Ollama si la DSI en a besoin, sans présenter ChatGPT comme un hébergement européen. Plafond journalier par agent. L'agent relit. Pas un conseil juridique.</p>
+          <p>TerritoIA, par STELLARMEET, tourne sur le serveur de la collectivité. Gratuit sous 3&nbsp;500 utilisateurs, puis 7&nbsp;000&nbsp;€ HT par an. Support compris : installation, mises à jour, aide à la DSI. Recherche web et base locale. Clé de la mairie. Mistral possible pour le RGPD et l’hébergement européen. Claude, ChatGPT ou Ollama si la DSI en a besoin, sans présenter ChatGPT comme un hébergement européen. Plafond journalier par agent. L’agent relit. Pas un conseil juridique.</p>
         </aside>
 
         <p>Le produit complet est décrit sur la <a href="../index.html">page TerritoIA</a>.</p>
+        <p>Ce texte est dans la rubrique <a href="modeles/index.html">Modèles et hébergement</a>. Le cadre du produit est sur la <a href="../ia-pour-mairie.html">page IA pour mairie</a>.</p>
         <h2>À lire ensuite</h2>
         <ul>
           <li><a href="veille-recap-du-matin.html">Le récap du matin, pour les agents et non pour les commerciaux</a></li>
-          <li><a href="installation-dsi.html">Installer l'instance : VM, script, clé, plafond</a></li>
+          <li><a href="installation-dsi.html">Installer l’instance : VM, script, clé, plafond</a></li>
         </ul>
       </article>
     </main>
     <footer class="footer">
       <div class="wrap">
-        <div>TerritoIA · STELLARMEET · SIREN 935 065 094</div>
-        <nav aria-label="Informations légales">
-          <a href="../mentions-legales.html">Mentions légales</a>
-          <a href="../confidentialite.html">Confidentialité</a>
-          <a href="../dpa.html">DPA</a>
-          <a href="../cookies.html">Cookies</a>
-          <a href="../index.html">Accueil</a>
-        </nav>
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
       </div>
     </footer>
     <script src="../motion.js"></script>

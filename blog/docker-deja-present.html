@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Le script s’arrête si Docker n’est pas déjà là</title>
+    <meta name="description" content="TerritoIA ne prend pas en charge l’installation de Docker. Le script s’arrête, et la DSI reprend quand le moteur est en place." />
+    <link rel="canonical" href="https://territoia.fr/blog/docker-deja-present.html" />
+    <meta property="og:title" content="Le script s’arrête si Docker n’est pas déjà là" />
+    <meta property="og:description" content="TerritoIA ne prend pas en charge l’installation de Docker. Le script s’arrête, et la DSI reprend quand le moteur est en place." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/docker-deja-present.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Le script d’installation s’arrête si Docker n’est pas déjà là","datePublished":"2026-11-12","inLanguage":"fr","description":"TerritoIA ne prend pas en charge l’installation de Docker. Le script s’arrête, et la DSI reprend quand le moteur est en place.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/docker-deja-present.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Installation par la DSI</p>
+        <h1>Le script d’installation s’arrête si Docker n’est pas déjà là</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>Si Docker n’est pas installé sur la VM, le script d’installation s’arrête. Il n’installe pas le moteur à la place de la DSI. La reprise se fait quand Docker est là, vérifié, et que le droit de lancer un conteneur est clair.</p>
+        <h2>Arrêt propre</h2>
+        <p>L’arrêt n’est pas une panne à contourner. La DSI lit le message, elle installe Docker selon sa propre procédure, elle relit que le service démarre au boot, puis elle relance le script. On ne colle pas une image « pour voir » sur une machine sans moteur.</p>
+        <h2>Pourquoi ce choix</h2>
+        <p>La collectivité garde la main sur le socle. Une installation silencieuse de Docker mélangerait la responsabilité de l’éditeur et celle de la DSI. Ici, la frontière est écrite : le script pose TerritoIA, pas le système.</p>
+        <h2>Après la reprise</h2>
+        <p>Une fois Docker présent, la DSI note la version dans le journal. Les agents n’interviennent pas. L’adresse reste interne. Ce n’est pas un accueil des habitants. Le maire ne signe rien à cette étape.</p>
+        <p>La DSI vérifie aussi que le disque du démon Docker est bien celui prévu pour les volumes, et pas un disque temporaire. Elle relit le chemin. Une mise à jour ultérieure ne doit pas écrire ailleurs sans qu’on l’ait vu.</p>
+        <p>La DSI vérifie aussi que le démon ne tourne pas en root négligé sur une machine partagée avec un autre applicatif critique. TerritoIA a sa VM. Mélanger le conteneur avec la messagerie ou le logiciel financier « pour économiser une machine » se discute à part, et se refuse si la sauvegarde et les droits ne sont plus lisibles. Elle relit le nom de la VM le matin de l’installation.</p>
+        <p>Le droit de parler au moteur Docker se limite aux administrateurs nommés. Un agent du secrétariat n’a pas ce droit, même s’il est curieux et même s’il a un compte sudo ailleurs « pour dépanner l’imprimante ». La DSI relit le groupe. Un ajout temporaire pour une démo se retire le soir même, et elle le note.</p>
+        <p>Si le script s’est arrêté, la DSI ne le relance pas en boucle en espérant un autre message. Elle traite la cause, puis un seul nouvel essai. Le support peut expliquer l’arrêt. Il n’installe pas Docker à distance et il ne demande pas le mot de passe de la VM. Les habitants ne sont pas concernés. Le maire ne signe rien. L’agent, plus tard, relira ses textes : cette étape-ci ne produit encore aucune réponse métier.</p>
+        <p>Elle note la version de Docker à côté du nom de la VM, et elle la revérifie après les mises à jour du système. Un démon qui ne redémarre plus au boot se voit le matin, pas pendant un conseil. La DSI relit le service au boot une fois, exprès.</p>
+        <p>Rubrique <a href="installation/index.html">Installation par la DSI</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="image-tar.html">L’image arrive en archive, pas par une boutique publique</a></li>
+          <li><a href="port-3000-adresse-interne.html">Le port 3000 reste une adresse interne</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

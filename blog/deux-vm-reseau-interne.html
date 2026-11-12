@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comment la DSI relie l’application et la VM Ollama sans ouvrir le service au public</title>
+    <meta name="description" content="Adresses internes, pare-feu, pas de port ouvert vers les habitants. Le modèle local ne devient pas un chat public." />
+    <link rel="canonical" href="https://territoia.fr/blog/deux-vm-reseau-interne.html" />
+    <meta property="og:title" content="Comment la DSI relie l’application et la VM Ollama sans ouvrir le service au public" />
+    <meta property="og:description" content="Adresses internes, pare-feu, pas de port ouvert vers les habitants. Le modèle local ne devient pas un chat public." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/deux-vm-reseau-interne.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Les deux VM se parlent sur le réseau interne. L’application n’est pas publiée sur le site de la ville","datePublished":"2026-11-12","inLanguage":"fr","description":"Adresses internes, pare-feu, pas de port ouvert vers les habitants. Le modèle local ne devient pas un chat public.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/deux-vm-reseau-interne.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Modèles et hébergement</p>
+        <h1>Les deux VM se parlent sur le réseau interne. L’application n’est pas publiée sur le site de la ville</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>La VM de l’application et la VM Ollama communiquent par le réseau que la DSI contrôle. L’adresse donnée aux agents est interne. Elle n’est pas le site municipal, elle n’est pas branchée au standard, elle ne répond pas aux habitants. Ouvrir le port vers l’internet pour « que le maire y accède de chez lui » sans un accès distant déjà cadré est un autre projet, à décider comme tel. L’agent relit. STELLARMEET ne conserve pas les échanges. Le maire ne signe pas depuis ce réseau.</p>
+        <h2>Pare-feu</h2>
+        <p>La DSI écrit quelles adresses peuvent joindre l’application et lesquelles peuvent joindre le modèle. En pratique, les postes des agents vers l’application, l’application vers le modèle, et c’est à peu près tout. Elle relit la règle après coup, parce qu’une règle « any » traîne souvent dans un copier-coller. Le modèle n’a pas à être joignable depuis le wifi invité.</p>
+        <p>Un test depuis un téléphone hors réseau interne doit échouer. La DSI fait ce test. Elle le note. Un succès est un trou, pas une bonne nouvelle.</p>
+        <h2>Noms et certificats</h2>
+        <p>L’adresse interne a un nom que les agents retiennent, comme ils retiennent l’adresse du courrier. Le certificat, s’il y en a un, est celui de la commune. La DSI ne laisse pas un avertissement de sécurité permanent « qu’on clique quand même ». Elle relit le nom sur le certificat. Un nom qui pointe encore vers une ancienne maquette se corrige avant l’ouverture du service.</p>
+        <p>Les identifiants des agents sont ceux de l’annuaire ou ceux créés pour l’application, selon le choix déjà fait. On ne partage pas un compte générique « urbanisme » pour aller plus vite.</p>
+        <h2>Habitants et actes</h2>
+        <p>Aucune page publique n’embarque la fenêtre de l’application. L’outil n’est pas un accueil. Les réponses ne sont pas des actes. Le maire signe ailleurs.</p>
+        <p>La DSI relit le schéma au moment où quelqu’un propose d’ajouter un robot sur le site de la ville « puisque le modèle est là ». La réponse est non : ce serait un autre service, pour les habitants, que cette installation ne fait pas. La note d’architecture le dit en une phrase, pour que la proposition ne revienne pas sous un autre nom.</p>
+        <p>La DSI refait le test « téléphone hors réseau » après chaque changement de pare-feu, pas seulement le jour de l’installation. Elle note l’échec attendu. Un accès qui réussit se ferme avant la fin de la journée. Les agents passent par l’adresse interne connue. Les habitants ne gagnent pas un service par un port oublié. L’outil n’est pas un accueil. Le maire n’obtient pas une exception wifi. Le schéma affiché dans la note est celui qui a passé le test.</p>
+        <p>Le nom interne figé dans les favoris des agents est le même que celui du certificat. La DSI relit les deux le jour où le DNS change. Un favori qui pointe vers une IP directe se retire, parce qu’il contourne le nom et le certificat.</p>
+        <p>Rubrique <a href="modeles/index.html">Modèles et hébergement</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="recherche-alternative-chatgpt.html">Alternative à ChatGPT en mairie : chercher dans le web et dans la base</a></li>
+          <li><a href="mistral-critere-rgpd.html">Pourquoi une DSI peut choisir Mistral pour une question de RGPD</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

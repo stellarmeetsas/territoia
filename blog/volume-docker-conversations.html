@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Où vivent les conversations dans l’installation Docker</title>
+    <meta name="description" content="Comptes, fils, base et intranet sont dans le volume Docker de la DSI. Mettre à jour l’image ne doit pas être confondu avec effacer ou copier ce volume." />
+    <link rel="canonical" href="https://territoia.fr/blog/volume-docker-conversations.html" />
+    <meta property="og:title" content="Où vivent les conversations dans l’installation Docker" />
+    <meta property="og:description" content="Comptes, fils, base et intranet sont dans le volume Docker de la DSI. Mettre à jour l’image ne doit pas être confondu avec effacer ou copier ce volume." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/volume-docker-conversations.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Dans le volume de la VM de la commune. Pas dans l’image. Pas chez l’éditeur","datePublished":"2026-11-12","inLanguage":"fr","description":"Comptes, fils, base et intranet sont dans le volume Docker de la DSI. Mettre à jour l’image ne doit pas être confondu avec effacer ou copier ce volume.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/volume-docker-conversations.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Modèles et hébergement</p>
+        <h1>Dans le volume de la VM de la commune. Pas dans l’image. Pas chez l’éditeur</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>L’application tourne dans Docker, à partir de l’image livrée. Les données persistent dans le volume que la commune administre. Une mise à jour remplace l’image, elle ne doit pas être l’occasion de jeter le volume ni de l’envoyer quelque part. STELLARMEET ne conserve pas ces données. La DSI sauvegarde le volume avec le reste de la VM. L’agent relit les contenus. Le volume n’est pas une signature du maire. Les habitants n’y ont pas accès.</p>
+        <h2>Geste de mise à jour</h2>
+        <p>Lire la note de version, sauvegarder, appliquer, tester une connexion et une recherche sur une pièce connue. La DSI note la version d’arrivée. Elle relit que le volume monté après coup est le même, pas un volume vide tout neuf qui donnerait l’illusion d’une installation saine. Un volume vide est un incident, pas une mise à jour réussie.</p>
+        <p>Le script d’installation initial charge l’image en fichier tar et démarre la pile. Le refaire sur une VM déjà en service sans savoir où est le volume est le risque. La DSI écrit le chemin du volume dans le journal. Elle ne le devine pas à chaque fois.</p>
+        <h2>Droits</h2>
+        <p>Qui peut lire le volume au niveau système ? Peu de comptes, ceux de l’exploitation. Ce n’est pas parce qu’un agent voit ses fils dans l’application qu’un administrateur doit les parcourir pour « vérifier ». La DSI relit les accès sudo et les partages. Un partage de confort vers un poste de bureau se ferme.</p>
+        <p>Les sauvegardes sont chiffrées selon la pratique de la commune pour les données internes. La DSI ne les pose pas sur une clé USB de formation.</p>
+        <h2>Public</h2>
+        <p>Restaurer un volume ne publie rien sur le site municipal. L’application reste interne. Ce n’est pas un accueil. Le maire ne signe pas une restauration.</p>
+        <p>La DSI teste une restauration une fois, sur un jeu qu’elle assume, et elle relit le compte rendu de ce test. Le support peut guider la commande. Il ne reçoit pas le volume pour le faire à la place de la commune.</p>
+        <p>Après la mise à jour, la DSI ouvre un compte de test et elle vérifie qu’un fil créé la veille est encore là, puis elle referme ce compte. Elle relit que le fil de test ne contient pas de vraie pièce. Les agents retrouvent leurs fils sans réimport. Les habitants n’ont rien à restaurer, faute d’accès. Ce n’est pas un accueil. Le maire ne signe pas la mise à jour. Le chemin du volume dans le journal est celui constaté ce jour-là, pas celui de l’ancienne note.</p>
+        <p>Le compte de test est supprimé ou vidé après la vérification, et la DSI relit qu’il ne reste pas administrateur. Les sauvegardes de la veille ne se restaurent pas sur la production pour « voir ». Le chemin noté est vérifié par une seconde personne.</p>
+        <p>Rubrique <a href="modeles/index.html">Modèles et hébergement</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="deux-vm-reseau-interne.html">Comment la DSI relie l’application et la VM Ollama sans ouvrir le service au public</a></li>
+          <li><a href="recherche-alternative-chatgpt.html">Alternative à ChatGPT en mairie : chercher dans le web et dans la base</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

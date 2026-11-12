@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>L’image arrive en archive, pas par une boutique publique</title>
+    <meta name="description" content="La DSI charge une image tar sur la VM. Elle ne tire pas l’application depuis un registre ouvert aux agents." />
+    <link rel="canonical" href="https://territoia.fr/blog/image-tar.html" />
+    <meta property="og:title" content="L’image arrive en archive, pas par une boutique publique" />
+    <meta property="og:description" content="La DSI charge une image tar sur la VM. Elle ne tire pas l’application depuis un registre ouvert aux agents." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/image-tar.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"L’image TerritoIA arrive en archive tar, pas par une boutique publique","datePublished":"2026-11-12","inLanguage":"fr","description":"La DSI charge une image tar sur la VM. Elle ne tire pas l’application depuis un registre ouvert aux agents.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/image-tar.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Installation par la DSI</p>
+        <h1>L’image TerritoIA arrive en archive tar, pas par une boutique publique</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>L’application est livrée comme une image que la DSI charge sur sa VM. Les agents ne téléchargent pas eux-mêmes un paquet, et l’image ne se cherche pas sur un site public au moment de la démo.</p>
+        <h2>Qui charge l’image</h2>
+        <p>La DSI, ou la personne qu’elle désigne, copie l’archive sur la VM et la charge. Elle note le nom du fichier et la date. Une seconde copie « pour essayer sur un poste » ne se fait pas. Le poste d’un agent n’est pas une VM de production.</p>
+        <h2>Contrôle avant lancement</h2>
+        <p>Avant de lancer, la DSI relit que l’archive est complète et que le disque a la place. Un fichier tronqué se signale tout de suite. On ne lance pas « quand même ». Le support peut confirmer le nom de fichier attendu. Il ne reçoit pas l’archive en retour.</p>
+        <h2>Ce que l’image n’emporte pas</h2>
+        <p>L’image ne contient pas les pièces de la collectivité ni les fils des agents. Ces contenus naissent sur la VM, dans le volume. Les habitants n’ont pas de paquet à installer. TerritoIA n’est pas un accueil. Le maire ne signe pas le chargement.</p>
+        <p>La DSI range l’archive livrée à part de la sauvegarde de production, pour pouvoir comparer en cas de doute, sans la mélanger aux conversations. Elle relit l’emplacement. Le journal d’exploitation porte la date de chargement, pas le contenu des dossiers.</p>
+        <p>La DSI compare la taille annoncée et la taille reçue avant de charger. Un écart se traite comme une archive incomplète, pas comme un détail. Elle relit le canal par lequel l’archive est arrivée : un lien interne, un transfert que la collectivité maîtrise, pas une pièce jointe ouverte sur un webmail personnel. Le nom du fichier se recopie dans le journal, sans le contenu des futurs dossiers.</p>
+        <p>Une fois l’image chargée, l’archive peut rester de côté, hors du volume des conversations, le temps de la première mise à jour. Elle ne reste pas sur le bureau d’un agent ni dans un dossier synchronisé vers un cloud grand public. La DSI relit l’emplacement. Si quelqu’un propose de la « mettre à disposition de tous les informaticiens du territoire » sur un partage large, elle resserre le partage.</p>
+        <p>Le chargement n’est pas une formation. Les agents n’assistent pas au docker load pour apprendre le métier. Ils verront l’adresse quand un service pilote aura déposé des pièces justes. D’ici là, l’outil n’est pas annoncé aux habitants, et il n’est pas un accueil. Le maire ne signe pas un bon de commande supplémentaire parce que l’image est sur le disque. La signature des actes viendra du circuit habituel, après relecture humaine.</p>
+        <p>Le journal porte aussi le nom de la personne qui a chargé l’archive, pas seulement la date. La DSI relit cette ligne quand une seconde archive arrive. On ne charge pas « la dernière reçue » sans ce nom. Le support confirme le fichier. Il ne le stocke pas pour la collectivité.</p>
+        <p>Rubrique <a href="installation/index.html">Installation par la DSI</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="port-3000-adresse-interne.html">Le port 3000 reste une adresse interne</a></li>
+          <li><a href="sauvegarde-vm-dsi.html">La sauvegarde de la VM reste à la DSI</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

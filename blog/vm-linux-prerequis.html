@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ce que la DSI prépare avant d’installer TerritoIA</title>
+    <meta name="description" content="Une VM Linux, un disque, Docker déjà là, une adresse interne. Ce que la DSI aligne avant de lancer l’image, et ce qui n’est pas un projet d’accueil." />
+    <link rel="canonical" href="https://territoia.fr/blog/vm-linux-prerequis.html" />
+    <meta property="og:title" content="Ce que la DSI prépare avant d’installer TerritoIA" />
+    <meta property="og:description" content="Une VM Linux, un disque, Docker déjà là, une adresse interne. Ce que la DSI aligne avant de lancer l’image, et ce qui n’est pas un projet d’accueil." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/vm-linux-prerequis.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Ce que la DSI prépare avant d’installer TerritoIA","datePublished":"2026-11-12","inLanguage":"fr","description":"Une VM Linux, un disque, Docker déjà là, une adresse interne. Ce que la DSI aligne avant de lancer l’image, et ce qui n’est pas un projet d’accueil.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/vm-linux-prerequis.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Installation par la DSI</p>
+        <h1>Ce que la DSI prépare avant d’installer TerritoIA</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>La DSI prépare une machine virtuelle Linux dédiée, avec assez de disque pour l’image, les pièces déposées et les sauvegardes. L’installation ne part pas d’un poste d’agent ni d’un hébergement grand public.</p>
+        <h2>Machine et disque</h2>
+        <p>La VM est isolée des postes. La DSI note le système, l’espace libre et qui a le droit de l’arrêter. Un disque juste pour « essayer » se remplit dès les premières pièces. Elle relit ces chiffres avant le premier lancement, pas après une alerte.</p>
+        <h2>Docker déjà présent</h2>
+        <p>Le script suppose Docker déjà installé. S’il ne l’est pas, il s’arrête. La DSI ne le découvre pas au milieu d’une démo. Elle vérifie la version et le droit de lancer un conteneur, et elle le note dans le journal d’exploitation.</p>
+        <h2>Ce que l’on ne prépare pas</h2>
+        <p>On ne prépare pas un nom de domaine public, un formulaire habitants ni un numéro de téléphone. TerritoIA n’est pas un accueil des usagers. Les comptes seront ceux des agents. Le maire ne signe pas les réponses de la machine.</p>
+        <p>La DSI date la liste des prérequis et elle la range avec la note d’architecture. Le jour de l’installation, on coche cette liste au lieu d’en improviser une. Un prérequis manquant reporte le lancement, il ne se contourne pas par un compte personnel.</p>
+        <p>La DSI écrit aussi qui peut créer la VM et qui peut seulement la consulter. Un prestataire d’infogérance, s’il y en a un, reçoit un compte borné dans le temps, pas un accès permanent « parce qu’il a déjà les autres serveurs ». Elle relit la date de fin de cet accès. Le jour dit, le compte tombe, même si le prestataire est en train d’aider sur un autre sujet.</p>
+        <p>Le choix du Linux n’est pas un débat public. La DSI retient une version qu’elle sait mettre à jour, avec les mêmes dépôts que le reste du parc. Une VM « spéciale pour l’IA », branchée sur des dépôts que personne ne surveille, se refuse. Les agents n’ont pas à connaître la distribution. Ils ont l’adresse interne, plus tard, quand la machine répond.</p>
+        <p>Avant le premier lancement, la DSI vérifie l’heure de la VM. Une horloge fausse complique les journaux et les sauvegardes. Elle note l’écart s’il y en a un, et elle le corrige. Ce contrôle ne signe aucun acte. Le maire n’est pas dans la salle serveurs. Les habitants n’ont aucune page à ouvrir. TerritoIA n’est pas un accueil : tant que les prérequis ne sont pas cochés, on n’annonce rien aux services.</p>
+        <p>La DSI note enfin le nom de la VM dans l’inventaire du parc, au même titre qu’un serveur de fichiers. Elle relit la fiche. Une machine absente de l’inventaire ne sera pas sauvegardée longtemps. Les agents n’ont pas cette fiche. Les habitants non plus.</p>
+        <p>Rubrique <a href="installation/index.html">Installation par la DSI</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="docker-deja-present.html">Le script s’arrête si Docker n’est pas déjà là</a></li>
+          <li><a href="image-tar.html">L’image arrive en archive, pas par une boutique publique</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

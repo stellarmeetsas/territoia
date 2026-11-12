@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disque, journaux techniques, et ce qu’on n’y met pas</title>
+    <meta name="description" content="La DSI surveille le disque et les journaux du conteneur. Ces journaux parlent de la machine, pas des dossiers des agents." />
+    <link rel="canonical" href="https://territoia.fr/blog/disque-et-logs.html" />
+    <meta property="og:title" content="Disque, journaux techniques, et ce qu’on n’y met pas" />
+    <meta property="og:description" content="La DSI surveille le disque et les journaux du conteneur. Ces journaux parlent de la machine, pas des dossiers des agents." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://territoia.fr/blog/disque-et-logs.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Disque, journaux techniques, et ce qu’on n’y met pas","datePublished":"2026-11-12","inLanguage":"fr","description":"La DSI surveille le disque et les journaux du conteneur. Ces journaux parlent de la machine, pas des dossiers des agents.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/disque-et-logs.html"}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../index.html#produit">Produit</a>
+        <a href="index.html">Journal</a>
+        <a href="../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <article class="doc post">
+        <p class="eyebrow">Installation par la DSI</p>
+        <h1>Disque, journaux techniques, et ce qu’on n’y met pas</h1>
+        <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>Le disque de la VM reçoit l’image, les pièces et les fils. La DSI suit l’espace libre. Les journaux techniques servent à comprendre un arrêt ou une erreur de démarrage. Ils ne remplacent pas le dossier métier.</p>
+        <h2>Seuil de disque</h2>
+        <p>La DSI fixe un seuil d’alerte avant que la VM soit pleine, et elle relit qui reçoit l’alerte. Un disque plein au milieu d’un dépôt se traite comme un incident d’exploitation, pas comme une faute du service qui déposait. On n’efface pas le volume pour « faire de la place » sans sauvegarde.</p>
+        <h2>Journaux</h2>
+        <p>Le journal technique peut contenir une erreur, une heure, un nom de conteneur. La DSI vérifie qu’il ne devient pas une copie des questions. Si une ligne trop bavarde apparaît, elle la traite comme un défaut à signaler au support, sans la transférer telle quelle si elle contient un dossier.</p>
+        <h2>Limite</h2>
+        <p>Ni le disque ni les journaux ne signent un acte. L’agent relit le texte. Les habitants n’ont pas accès à ces journaux. TerritoIA n’est pas un accueil. Le maire ne demande pas une extraction des logs pour un conseil.</p>
+        <p>La DSI range la procédure de rotation ou d’archivage des journaux avec celle des autres VM. Elle relit que l’archivage des logs ne part pas vers une messagerie personnelle. Le support reçoit un extrait technique court, daté, sans pièce jointe métier.</p>
+        <p>La DSI fixe deux seuils, pas un seul : un seuil d’avertissement, un seuil où l’on cesse d’accepter un gros dépôt tant que la place n’est pas rendue. Elle nomme qui reçoit l’alerte, y compris pendant les congés. Elle relit que l’alerte n’arrive pas seulement sur une boîte que plus personne n’ouvre. Effacer des pièces pour faire de la place est une décision du service éditeur de la base, pas un geste d’exploitation dans la panique.</p>
+        <p>Les journaux techniques se conservent le temps utile au diagnostic, puis ils tournent comme ceux des autres VM. La DSI vérifie un matin que le fichier de log ne grossit pas sans limite. Elle n’y cherche pas les questions des agents. Si une ligne contient un bout de dossier, elle le signale au support comme un défaut, après avoir retiré le contenu sensible de son propre message. Le ticket porte l’heure et le type d’erreur.</p>
+        <p>Rien de ces journaux ne sort vers les habitants, ni vers le site municipal, ni vers un tableau de bord politique. TerritoIA n’est pas un accueil. Le maire ne demande pas « les questions de la semaine » extraites des logs. L’agent relit ses textes dans l’application, pas dans un journal système. La DSI peut dire si la machine va. Elle ne dit pas si une délibération est bonne. Signer reste le circuit du service, sur le document relu, hors de l’écran d’exploitation.</p>
+        <p>Rubrique <a href="installation/index.html">Installation par la DSI</a>. Cadre du produit : <a href="../ia-pour-mairie.html">IA pour mairie</a>.</p>
+        <h2>À lire ensuite</h2>
+        <ul>
+          <li><a href="retour-arriere-mise-a-jour.html">Revenir à l’image précédente si la mise à jour échoue</a></li>
+          <li><a href="qui-administre.html">Qui administre l’application au quotidien</a></li>
+        </ul>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../motion.js"></script>
+  </body>
+</html>

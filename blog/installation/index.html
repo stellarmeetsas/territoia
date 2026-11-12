@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Installation DSI — journal TerritoIA</title>
+    <meta name="description" content="VM Linux, Docker déjà présent, image, port, Ollama, sauvegarde et comptes agents : ce que la DSI tient, et ce que l’éditeur ne conserve pas." />
+    <link rel="canonical" href="https://territoia.fr/blog/installation/index.html" />
+    <meta property="og:title" content="Installation DSI — journal TerritoIA" />
+    <meta property="og:description" content="VM Linux, Docker déjà présent, image, port, Ollama, sauvegarde et comptes agents : ce que la DSI tient, et ce que l’éditeur ne conserve pas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://territoia.fr/blog/installation/index.html" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="nav">
+      <a class="brand" href="../../index.html"><img src="../../favicon.svg" alt="" /> TerritoIA</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="../../index.html#produit">Produit</a>
+        <a href="../index.html">Journal</a>
+        <a href="../../index.html#licence">Licence</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
+      </nav>
+    </header>
+    <main id="contenu" class="wrap section">
+      <p class="eyebrow">DSI</p>
+      <h1>Une VM, un script, une clé, pas une installation en une minute</h1>
+      <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
+        <p>L’installation tient en une machine Linux que la collectivité administre. Docker et Docker Compose doivent déjà être là : le script s’arrête s’ils manquent. Il charge l’image livrée et démarre l’application. Le port par défaut est 3000, ensuite l’adresse interne. Ce n’est pas un logiciel à poser sur chaque poste, ni un robot publié sur le site de la ville.</p>
+        <p>STELLARMEET fournit le logiciel, le support et les mises à jour, et ne conserve pas les conversations ni les fichiers. La sauvegarde de la VM est l’affaire de la DSI. Quelques notes rappellent la licence seulement quand la question est le nombre de comptes : gratuit sous 3 500 utilisateurs, sinon 7 000 € HT par an, quelle que soit la taille. Utilisateurs veut dire comptes agents.</p>
+      <div class="catalog">
+        <a class="glass" href="../installation-dsi.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>VM Linux, script, clé, plafond journalier</h2>
+          <p>VM Linux, script d’installation, clé de la mairie et plafond journalier.</p>
+        </a>
+        <a class="glass" href="../vm-linux-prerequis.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Ce que la DSI prépare avant d’installer TerritoIA</h2>
+          <p>Une VM Linux, un disque, Docker déjà là, une adresse interne. Ce que la DSI aligne avant de lancer l’image, et ce qui n’est pas un projet d’accueil.</p>
+        </a>
+        <a class="glass" href="../docker-deja-present.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Le script d’installation s’arrête si Docker n’est pas déjà là</h2>
+          <p>TerritoIA ne prend pas en charge l’installation de Docker. Le script s’arrête, et la DSI reprend quand le moteur est en place.</p>
+        </a>
+        <a class="glass" href="../image-tar.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>L’image TerritoIA arrive en archive tar, pas par une boutique publique</h2>
+          <p>La DSI charge une image tar sur la VM. Elle ne tire pas l’application depuis un registre ouvert aux agents.</p>
+        </a>
+        <a class="glass" href="../port-3000-adresse-interne.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Le port 3000 de TerritoIA reste une adresse interne</h2>
+          <p>L’application écoute sur le port 3000 de la VM. La DSI publie une adresse interne, pas une page du site municipal.</p>
+        </a>
+        <a class="glass" href="../sauvegarde-vm-dsi.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>La sauvegarde de la VM TerritoIA reste à la charge de la DSI</h2>
+          <p>L’éditeur ne sauvegarde pas la machine. La DSI inclut la VM et le volume des conversations dans son plan, et elle teste une restauration.</p>
+        </a>
+        <a class="glass" href="../comptes-agents-pas-habitants.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Les comptes ouverts à l’installation sont ceux des agents</h2>
+          <p>La DSI crée des comptes pour les agents, pas pour les habitants. Le seuil gratuit se compte sur ces comptes, pas sur la population.</p>
+        </a>
+        <a class="glass" href="../mise-a-jour-logiciel.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Une mise à jour de TerritoIA se fait sur la VM, pas chez l’éditeur</h2>
+          <p>La DSI applique la mise à jour sur sa machine. Le support et les mises à jour sont compris. Les fils restent dans le volume local.</p>
+        </a>
+        <a class="glass" href="../support-ce-qu-il-fait.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Ce que le support TerritoIA voit, et ce qu’il ne voit pas</h2>
+          <p>Le support aide sur l’installation, la clé, la mise à jour. Il ne reçoit pas les dossiers ni les fils. Les données restent sur la VM.</p>
+        </a>
+        <a class="glass" href="../pas-en-quelques-secondes.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>L’installation de TerritoIA n’est pas une affaire de quelques secondes</h2>
+          <p>Préparer la VM, vérifier Docker, charger l’image, choisir l’adresse interne et ouvrir les comptes prend un créneau de DSI. Ce n’est pas un essai en ligne.</p>
+        </a>
+        <a class="glass" href="../reseau-interne-pas-site.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>L’adresse de TerritoIA n’est pas celle du site municipal</h2>
+          <p>Les agents ouvrent une adresse interne. Le site de la commune, lui, continue de s’adresser aux habitants. On ne mélange pas les deux.</p>
+        </a>
+        <a class="glass" href="../que-deposer-en-premier.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Quelles pièces déposer dans TerritoIA le premier jour</h2>
+          <p>Le premier dépôt est un petit fonds utile : règlement, organigramme, procédures déjà tenues. Pas les archives entières, pas les dossiers nominatifs.</p>
+        </a>
+        <a class="glass" href="../annuaire-ou-comptes-locaux.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Annuaire de la collectivité ou comptes posés sur la VM</h2>
+          <p>La DSI choisit comment les agents se connectent : annuaire déjà en place, ou comptes créés pour l’application. Elle l’écrit, et elle tient le choix.</p>
+        </a>
+        <a class="glass" href="../disque-et-logs.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Disque, journaux techniques, et ce qu’on n’y met pas</h2>
+          <p>La DSI surveille le disque et les journaux du conteneur. Ces journaux parlent de la machine, pas des dossiers des agents.</p>
+        </a>
+        <a class="glass" href="../retour-arriere-mise-a-jour.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Revenir à l’image précédente si la mise à jour échoue</h2>
+          <p>La DSI garde l’image d’avant et le volume. Si la nouvelle version ne démarre pas, elle revient en arrière sans mélanger les deux.</p>
+        </a>
+        <a class="glass" href="../qui-administre.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Qui administre TerritoIA au quotidien</h2>
+          <p>Une ou deux personnes à la DSI tiennent la VM, les comptes et les mises à jour. L’édition de la base, elle, reste dans les services.</p>
+        </a>
+        <a class="glass" href="../test-de-fumee.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Le contrôle du premier jour, avant d’ouvrir les services</h2>
+          <p>La DSI vérifie l’adresse interne, un compte de test, un dépôt minuscule, puis elle retire le test. Ensuite seulement, un service pilote entre.</p>
+        </a>
+        <a class="glass" href="../documentation-interne.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>La page interne que la DSI doit aux agents</h2>
+          <p>Une page sur l’intranet : l’adresse, ce que l’outil fait, ce qu’il ne fait pas. Pas une plaquette, pas une promesse aux habitants.</p>
+        </a>
+        <a class="glass" href="../prix-comptes-agents.html">
+          <p class="k">12 novembre 2026</p>
+          <h2>Comment compter les comptes avant de parler de prix</h2>
+          <p>Le prix se lit sur le nombre de comptes d’agents. Sous 3 500, c’est gratuit. Au-dessus, 7 000 € HT par an, quelle que soit la taille de la collectivité.</p>
+        </a>
+      </div>
+      <p class="fine"><a href="../index.html">Toutes les rubriques</a> · <a href="../../ia-pour-mairie.html">IA pour mairie</a></p>
+    </main>
+    <footer class="footer">
+      <div class="wrap">
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../../mentions-legales.html">Mentions légales</a> · <a href="../../confidentialite.html">Confidentialité</a> · <a href="../../dpa.html">DPA</a> · <a href="../../cookies.html">Cookies</a></p>
+      </div>
+    </footer>
+    <script src="../../motion.js"></script>
+  </body>
+</html>

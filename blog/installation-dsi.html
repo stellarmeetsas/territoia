@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Installer l'IA des agents : VM Linux, script, clé, plafond journalier</title>
-    <meta name="description" content="Pour une DSI, l'assistant IA d'une collectivité tient en une VM Linux, un script, la clé de la mairie et un plafond journalier. Ollama reste possible sur une seconde VM." />
+    <title>Installer l’IA des agents : VM Linux, script, clé, plafond journalier</title>
+    <meta name="description" content="Pour une DSI, l’assistant IA d’une collectivité tient en une VM Linux, un script, la clé de la mairie et un plafond journalier. Ollama reste possible sur une seconde VM." />
     <link rel="canonical" href="https://territoia.fr/blog/installation-dsi.html" />
-    <meta property="og:title" content="Installer l'IA des agents : VM Linux, script, clé, plafond journalier" />
+    <meta property="og:title" content="Installer l’IA des agents : VM Linux, script, clé, plafond journalier" />
     <meta property="og:description" content="Installation TerritoIA : Docker déjà en place, script, clé de la mairie, modèles au choix, quota journalier par agent." />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://territoia.fr/blog/installation-dsi.html" />
@@ -14,7 +14,7 @@
     <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Installer l'IA des agents : VM Linux, script, clé, plafond journalier","datePublished":"2026-11-12","inLanguage":"fr","description":"VM Linux, script d'installation, clé de la mairie et plafond journalier.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/installation-dsi.html"}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Installer l’IA des agents : VM Linux, script, clé, plafond journalier","datePublished":"2026-11-12","inLanguage":"fr","description":"VM Linux, script d’installation, clé de la mairie et plafond journalier.","author":{"@type":"Organization","name":"STELLARMEET"},"publisher":{"@type":"Organization","name":"STELLARMEET"},"mainEntityOfPage":"https://territoia.fr/blog/installation-dsi.html"}
     </script>
   </head>
   <body>
@@ -22,12 +22,10 @@
     <header class="nav">
       <a class="brand" href="../index.html"><img src="../favicon.svg" alt="" /> TerritoIA</a>
       <nav class="nav-links" aria-label="Principal">
-        <a href="../index.html#installation">Installation</a>
         <a href="../index.html#produit">Produit</a>
-        <a href="index.html">Blog</a>
+        <a href="index.html">Journal</a>
         <a href="../index.html#licence">Licence</a>
-        <a href="../mentions-legales.html">Mentions</a>
-        <a class="btn btn-copper" href="mailto:contact@legalbotik.fr">Écrire</a>
+        <a class="btn" href="mailto:contact@legalbotik.fr">Écrire</a>
       </nav>
     </header>
     <main id="contenu" class="wrap section">
@@ -35,51 +33,45 @@
         <p class="eyebrow">IA fonction publique territoriale</p>
         <h1>Ce que la DSI installe vraiment : une VM, un script, une clé</h1>
         <p class="updated">12 novembre 2026 · TerritoIA, édité par STELLARMEET</p>
-        <p>Les guides sur l'IA dans la fonction publique territoriale parlent de charte, de formation et d'usages déjà là chez les agents. C'est le bon cadre politique. La question opérationnelle, le matin où la DSI doit avancer, est plus sèche : sur quelle machine, avec quel script, avec quelle clé, et comment un agent n'épuise pas le compte. TerritoIA répond à cette question-là, sans prétendre régler à lui seul le dialogue social ni la formation.</p>
-        <p>L'installation n'est pas une promesse en trente secondes. Docker et Docker Compose doivent déjà être sur la VM Linux. Le script s'arrête s'ils manquent : il ne les installe pas. Il charge ensuite l'image livrée, un fichier .tar, et démarre l'application avec Docker Compose. Le port par défaut est 3000, que la DSI publie ensuite sur l'adresse interne de la mairie. Le support de la licence couvre cette installation, les mises à jour et l'aide à la DSI.</p>
+        <p>Les guides sur l’IA dans la fonction publique territoriale parlent de charte, de formation et d’usages déjà là chez les agents. C’est le bon cadre politique. La question opérationnelle, le matin où la DSI doit avancer, est plus sèche : sur quelle machine, avec quel script, avec quelle clé, et comment un agent n’épuise pas le compte. TerritoIA répond à cette question-là, sans prétendre régler à lui seul le dialogue social ni la formation.</p>
+        <p>L’installation n’est pas une promesse en trente secondes. Docker et Docker Compose doivent déjà être sur la VM Linux. Le script s’arrête s’ils manquent : il ne les installe pas. Il charge ensuite l’image livrée, un fichier .tar, et démarre l’application avec Docker Compose. Le port par défaut est 3000, que la DSI publie ensuite sur l’adresse interne de la mairie. Le support de la licence couvre cette installation, les mises à jour et l’aide à la DSI.</p>
 
         <h2>La clé de la mairie, et le choix du modèle</h2>
-        <p>Une clé est saisie dans les réglages, pour la collectivité, pas pour chaque agent. Mistral peut être choisi pour une question de RGPD : hébergement européen, contrat passé par la collectivité. Le logiciel n'est pas limité à ce fournisseur. Il prend en charge Claude, ChatGPT, ou un autre modèle que la DSI a besoin de brancher. STELLARMEET ne garde pas les échanges. L'usage d'une API est facturé par le fournisseur, sur le compte de la mairie.</p>
-        <p>ChatGPT peut donc être le modèle retenu. Cette page ne dit pas qu'il est hébergé en Europe. Seul le contrat que la collectivité signe avec ce fournisseur répond à cette question. Aucune certification n'est invoquée pour combler le trou. Si la DSI ne veut pas d'API externe, une seconde VM peut porter Ollama. Le script sait installer Ollama sous Linux et télécharger les modèles. Il faut compter plusieurs minutes pour ce téléchargement. Les questions restent alors sur cette VM.</p>
+        <p>Une clé est saisie dans les réglages, pour la collectivité, pas pour chaque agent. Mistral peut être choisi pour une question de RGPD : hébergement européen, contrat passé par la collectivité. Le logiciel n’est pas limité à ce fournisseur. Il prend en charge Claude, ChatGPT, ou un autre modèle que la DSI a besoin de brancher. STELLARMEET ne garde pas les échanges. L’usage d’une API est facturé par le fournisseur, sur le compte de la mairie.</p>
+        <p>ChatGPT peut donc être le modèle retenu. Cette page ne dit pas qu’il est hébergé en Europe. Seul le contrat que la collectivité signe avec ce fournisseur répond à cette question. Aucune certification n’est invoquée pour combler le trou. Si la DSI ne veut pas d’API externe, une seconde VM peut porter Ollama. Le script sait installer Ollama sous Linux et télécharger les modèles. Il faut compter plusieurs minutes pour ce téléchargement. Les questions restent alors sur cette VM.</p>
 
         <h2>Le plafond journalier</h2>
-        <p>Un compte d'API a un quota. Sans répartition, le premier service qui lance de longues recherches peut le consommer pour tout le monde. TerritoIA répartit ce quota automatiquement. Un plafond journalier est calculé pour chaque agent, à partir du quota réel du compte, pour qu'un agent ne brûle pas le stock de tokens de la collectivité. Le plafond suit le compte réel : ce n'est pas un chiffre décoratif identique pour toutes les mairies.</p>
-        <p>Ce mécanisme est un outil d'exploitation, pas un paragraphe de marché public. Il ne remplace pas une charte d'usage, ni la décision de ne pas coller de données nominatives dans une question. Il évite seulement qu'une absence de limite technique transforme un essai en facture inutile, ou en panne de quota en milieu de mois.</p>
+        <p>Un compte d’API a un quota. Sans répartition, le premier service qui lance de longues recherches peut le consommer pour tout le monde. TerritoIA répartit ce quota automatiquement. Un plafond journalier est calculé pour chaque agent, à partir du quota réel du compte, pour qu’un agent ne brûle pas le stock de tokens de la collectivité. Le plafond suit le compte réel : ce n’est pas un chiffre décoratif identique pour toutes les mairies.</p>
+        <p>Ce mécanisme est un outil d’exploitation, pas un paragraphe de marché public. Il ne remplace pas une charte d’usage, ni la décision de ne pas coller de données nominatives dans une question. Il évite seulement qu’une absence de limite technique transforme un essai en facture inutile, ou en panne de quota en milieu de mois.</p>
 
-        <h2>Ce que les agents font une fois l'adresse ouverte</h2>
-        <p>Le secrétariat pose une question de délai ou de trame d'acte, puis relit. Les RH demandent un cadre de recrutement ou de fiche de poste, sans y mettre un dossier individuel complet. L'urbanisme rapproche un délai et, s'il a été déposé, le règlement local. Les marchés demandent une piste de procédure que l'acheteur vérifie. Les finances demandent une lecture de dotation pour une note, sans montant inventé. La communication demande une reformulation d'un texte déjà publié.</p>
-        <p>L'écran du matin ajoute l'actualité de la collectivité, la base et l'intranet. Rien de tout cela ne signe un acte. STELLARMEET n'est pas un cabinet d'avocats. Une réponse fausse reste une réponse fausse, qu'elle vienne de Mistral, de Claude, de ChatGPT ou d'Ollama. L'agent qui l'envoie sans la lire en porte la responsabilité avec sa hiérarchie, pas le modèle.</p>
+        <h2>Ce que les agents font une fois l’adresse ouverte</h2>
+        <p>Le secrétariat pose une question de délai ou de trame d’acte, puis relit. Les RH demandent un cadre de recrutement ou de fiche de poste, sans y mettre un dossier individuel complet. L’urbanisme rapproche un délai et, s’il a été déposé, le règlement local. Les marchés demandent une piste de procédure que l’acheteur vérifie. Les finances demandent une lecture de dotation pour une note, sans montant inventé. La communication demande une reformulation d’un texte déjà publié.</p>
+        <p>L’écran du matin ajoute l’actualité de la collectivité, la base et l’intranet. Rien de tout cela ne signe un acte. STELLARMEET n’est pas un cabinet d’avocats. Une réponse fausse reste une réponse fausse, qu’elle vienne de Mistral, de Claude, de ChatGPT ou d’Ollama. L’agent qui l’envoie sans la lire en porte la responsabilité avec sa hiérarchie, pas le modèle.</p>
 
         <h2>Ce qui reste sur le serveur</h2>
-        <p>Comptes, conversations, pièces et articles d'intranet sont dans le volume de la VM. STELLARMEET fournit le logiciel, le maintient à jour et assure le support. STELLARMEET ne conserve pas les conversations ni les fichiers des agents. Les mises à jour de l'image ne sont pas une reprise d'hébergement : la base reste chez la collectivité.</p>
-        <p>Sous 3&nbsp;500 utilisateurs, la licence est gratuite. Au-dessus, 7&nbsp;000&nbsp;€ HT par an, quelle que soit la taille. Le support indiqué plus haut est compris. Le prix du modèle, s'il y a une API, est en plus, payé au fournisseur par la collectivité. En mode Ollama, il n'y a pas cette facture d'API. Il y a le temps machine et le temps de téléchargement des modèles.</p>
+        <p>Comptes, conversations, pièces et articles d’intranet sont dans le volume de la VM. STELLARMEET fournit le logiciel, le maintient à jour et assure le support. STELLARMEET ne conserve pas les conversations ni les fichiers des agents. Les mises à jour de l’image ne sont pas une reprise d’hébergement : la base reste chez la collectivité.</p>
+        <p>Sous 3&nbsp;500 utilisateurs, la licence est gratuite. Au-dessus, 7&nbsp;000&nbsp;€ HT par an, quelle que soit la taille. Le support indiqué plus haut est compris. Le prix du modèle, s’il y a une API, est en plus, payé au fournisseur par la collectivité. En mode Ollama, il n’y a pas cette facture d’API. Il y a le temps machine et le temps de téléchargement des modèles.</p>
 
-        <p>Après le démarrage, la DSI ouvre l'adresse, suit l'assistant de configuration et renseigne le modèle. Si le fichier image .tar n'est pas à côté du script, l'installation s'arrête : le logiciel est livré avec la licence, il n'est pas récupéré tout seul sur un registre public.</p>
-        <p>Les services peuvent alors poser leurs questions de tous les jours, du secrétariat aux finances, en passant par les RH, l'urbanisme, les marchés et la communication. Le plafond journalier s'applique à ces questions comme aux autres. La relecture aussi.</p>
+        <p>Après le démarrage, la DSI ouvre l’adresse, suit l’assistant de configuration et renseigne le modèle. Si le fichier image .tar n’est pas à côté du script, l’installation s’arrête : le logiciel est livré avec la licence, il n’est pas récupéré tout seul sur un registre public.</p>
+        <p>Les services peuvent alors poser leurs questions de tous les jours, du secrétariat aux finances, en passant par les RH, l’urbanisme, les marchés et la communication. Le plafond journalier s’applique à ces questions comme aux autres. La relecture aussi.</p>
 
         <aside class="box">
           <h2>Encadré produit</h2>
-          <p>TerritoIA, STELLARMEET, sur la VM de la DSI. Gratuit sous 3&nbsp;500 utilisateurs, puis 7&nbsp;000&nbsp;€ HT par an. Support : installation, mises à jour, aide. Docker requis avant le script. Clé de la mairie. Mistral possible pour le RGPD et l'Europe. Claude, ChatGPT ou Ollama selon le besoin, sans promesse d'hébergement européen pour ChatGPT. Plafond journalier par agent. Conversations et fichiers sur place. L'agent relit.</p>
+          <p>TerritoIA, STELLARMEET, sur la VM de la DSI. Gratuit sous 3&nbsp;500 utilisateurs, puis 7&nbsp;000&nbsp;€ HT par an. Support : installation, mises à jour, aide. Docker requis avant le script. Clé de la mairie. Mistral possible pour le RGPD et l’Europe. Claude, ChatGPT ou Ollama selon le besoin, sans promesse d’hébergement européen pour ChatGPT. Plafond journalier par agent. Conversations et fichiers sur place. L’agent relit.</p>
         </aside>
 
-        <p>Le reste du produit est sur la <a href="../index.html">page d'accueil</a>.</p>
+        <p>Le reste du produit est sur la <a href="../index.html">page d’accueil</a>.</p>
+        <p>Ce texte ouvre la rubrique <a href="installation/index.html">Installation par la DSI</a>. Le cadre du produit est sur la <a href="../ia-pour-mairie.html">page IA pour mairie</a>.</p>
         <h2>À lire ensuite</h2>
         <ul>
           <li><a href="recherche-alternative-chatgpt.html">Pourquoi la recherche ne passe plus par un compte personnel</a></li>
-          <li><a href="assistant-ia-mairie.html">À quoi sert l'assistant une fois installé</a></li>
+          <li><a href="assistant-ia-mairie.html">À quoi sert l’assistant une fois installé</a></li>
         </ul>
       </article>
     </main>
     <footer class="footer">
       <div class="wrap">
-        <div>TerritoIA · STELLARMEET · SIREN 935 065 094</div>
-        <nav aria-label="Informations légales">
-          <a href="../mentions-legales.html">Mentions légales</a>
-          <a href="../confidentialite.html">Confidentialité</a>
-          <a href="../dpa.html">DPA</a>
-          <a href="../cookies.html">Cookies</a>
-          <a href="../index.html">Accueil</a>
-        </nav>
+        <p>TerritoIA · STELLARMEET, SAS · SIREN 935&nbsp;065&nbsp;094 · 25 rue de Ponthieu, 75008 Paris · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../dpa.html">DPA</a> · <a href="../cookies.html">Cookies</a></p>
       </div>
     </footer>
     <script src="../motion.js"></script>
