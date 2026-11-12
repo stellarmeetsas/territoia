@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TerritoIA — Assistant IA pour mairie et collectivité, installé chez elle</title>
+    <title>IA pour mairie — TerritoIA, l'application des agents, installée chez eux</title>
     <meta
       name="description"
-      content="TerritoIA est l'assistant IA des agents d'une mairie ou d'une collectivité. Le logiciel s'installe sur le serveur de la DSI. Licence 7 000 € HT par an, support compris."
+      content="IA pour mairie et collectivité, installée sur le serveur de la DSI. Sous 3 500 utilisateurs : 0 €. Au-dessus : 7 000 € HT par an, prix fixe. Support, mises à jour et maintenance compris."
     />
     <link rel="canonical" href="https://stellarmeetsas.github.io/territoia/" />
-    <meta property="og:title" content="TerritoIA — Assistant IA pour mairie et collectivité, installé chez elle" />
-    <meta property="og:description" content="Assistant IA des agents territoriaux, installé sur le serveur de la collectivité. 7 000 € HT par an, support compris." />
+    <meta property="og:title" content="IA pour mairie — TerritoIA, l'application des agents, installée chez eux" />
+    <meta property="og:description" content="Sous 3 500 utilisateurs, TerritoIA est gratuit. Au-dessus, 7 000 € HT par an, quel que soit la taille. Installé sur le serveur de la collectivité." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://stellarmeetsas.github.io/territoia/" />
     <meta property="og:locale" content="fr_FR" />
@@ -45,12 +45,22 @@
           "operatingSystem": "Linux",
           "inLanguage": "fr",
           "description": "Assistant IA des agents d'une mairie ou d'une collectivité, installé sur le serveur de la DSI.",
-          "offers": {
-            "@type": "Offer",
-            "price": "7000",
-            "priceCurrency": "EUR",
-            "description": "Licence annuelle : 7 000 € HT. Support compris : installation, mises à jour, aide à la DSI."
-          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Sous 3 500 utilisateurs",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "description": "Licence gratuite sous 3 500 utilisateurs. Support, mises à jour et maintenance compris."
+            },
+            {
+              "@type": "Offer",
+              "name": "Au-dessus de 3 500 utilisateurs",
+              "price": "7000",
+              "priceCurrency": "EUR",
+              "description": "7 000 € HT par an. Le prix ne change pas avec la taille. Support, mises à jour et maintenance compris."
+            }
+          ],
           "provider": { "@type": "Organization", "name": "STELLARMEET" }
         }
       ]
@@ -59,7 +69,6 @@
   </head>
   <body>
     <a class="skip" href="#contenu">Aller au contenu</a>
-    <div class="aurora" aria-hidden="true"></div>
     <header class="nav">
       <a class="brand" href="index.html"><img src="favicon.svg" alt="" /> TerritoIA</a>
       <nav class="nav-links" aria-label="Principal">
@@ -75,66 +84,51 @@
 
     <main id="contenu">
       <section class="hero wrap">
-        <p class="eyebrow reveal">Pour les DGS, les DSI, les communicants</p>
-        <h1 class="reveal">La collectivité a son IA.</h1>
-        <p class="lead reveal">
-          TerritoIA tourne sur une VM Linux de la DSI. Le matin, les agents
-          ouvrent un récap déjà nourri par la base de savoir, l'actualité de
-          la commune et l'intranet. Ensuite ils cherchent, dans le web et dans
-          les pièces de la mairie.
-        </p>
-        <ul class="pills">
-          <li>VM Linux</li>
-          <li>Un script</li>
-          <li>Clé de la mairie</li>
-          <li>7&nbsp;000&nbsp;€ HT / an</li>
-          <li>Données sur place</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-copper" href="mailto:contact@legalbotik.fr?subject=Installation%20TerritoIA">Demander une installation</a>
-          <a class="btn btn-ghost" href="#licence">Voir la licence</a>
+        <div class="hero-text">
+          <h1>IA pour mairie.</h1>
+          <p class="lead">L'application des agents, sur la VM de la DSI. Une recherche, le récap du matin, la base de connaissance. Pas un callbot d'usagers.</p>
         </div>
-
-        <figure class="stage reveal" aria-label="Aperçu du produit : recherche, récap du matin, base de savoir">
-          <header>
-            <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>ia.votre-mairie.local</span>
-            <span class="pulse-dot">en ligne</span>
-          </header>
-          <div class="ask">
+        <figure class="app" aria-label="Fenêtre du produit : recherche, récap du matin, base de connaissance">
+          <div class="app-bar">
+            <span>TerritoIA</span>
+            <span>Adresse interne</span>
+          </div>
+          <div class="app-search">
             <span>Recherche</span>
-            <p class="typed" data-type="Délai pour transmettre un acte au contrôle de légalité"></p>
+            <p class="typed" data-type="Délai pour transmettre un acte au contrôle de légalité">Délai pour transmettre un acte au contrôle de légalité</p>
+            <p class="hint">Web et base, dans la même question.</p>
           </div>
-          <div class="stage-grid">
-            <article>
-              <p class="k">Récap du matin</p>
-              <div class="swap">
-                <p>Actualité de la collectivité</p>
-                <p>Pièces de la base de savoir</p>
-                <p>Notes publiées sur l'intranet</p>
-              </div>
-            </article>
-            <article>
-              <p class="k">La base répond</p>
-              <ul class="chips">
-                <li>Droit territorial</li>
-                <li>RH</li>
-                <li>Urbanisme</li>
-                <li>Marchés</li>
-                <li>Finances</li>
-              </ul>
-            </article>
+          <div class="app-block">
+            <p class="app-k">Récap du matin</p>
+            <ol>
+              <li class="line">Actualité de la collectivité</li>
+              <li class="line">Pièces de la base de savoir</li>
+              <li class="line">Notes publiées sur l'intranet</li>
+            </ol>
           </div>
-          <div class="beam" aria-hidden="true"></div>
+          <div class="app-block">
+            <p class="app-k">Base de connaissance</p>
+            <p class="kb-line"><span>Contrôle de légalité</span><span>Droit territorial, tenu par l'éditeur</span></p>
+          </div>
         </figure>
-      </section>
-
-      <div class="ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>Droit territorial</span><span>RH</span><span>Urbanisme</span><span>Marchés publics</span><span>Finances locales</span><span>Intranet</span><span>Récap du matin</span><span>Base de savoir</span>
-          <span>Droit territorial</span><span>RH</span><span>Urbanisme</span><span>Marchés publics</span><span>Finances locales</span><span>Intranet</span><span>Récap du matin</span><span>Base de savoir</span>
+        <div class="hero-buy">
+          <dl class="prices">
+            <div>
+              <dt>Sous 3&nbsp;500 utilisateurs</dt>
+              <dd>Gratuit</dd>
+            </div>
+            <div>
+              <dt>Au-dessus, quelle que soit la taille</dt>
+              <dd>7&nbsp;000&nbsp;€ <span>HT / an</span></dd>
+            </div>
+          </dl>
+          <p class="fine">Comptes agents, pas le nombre d'habitants. Support, mises à jour et maintenance compris. STELLARMEET fournit le logiciel et ne conserve pas les conversations ni les fichiers.</p>
+          <div class="actions">
+            <a class="btn btn-copper" href="mailto:contact@legalbotik.fr?subject=Installation%20TerritoIA">Demander une installation</a>
+            <a class="quiet" href="ia-pour-mairie.html">Page IA pour mairie</a>
+          </div>
         </div>
-      </div>
+      </section>
 
       <section class="section wrap" id="installation">
         <p class="eyebrow">Côté DSI</p>
@@ -234,15 +228,24 @@
       <section class="section wrap" id="licence">
         <div class="offer">
           <div class="reveal">
-            <p class="eyebrow">Licence annuelle</p>
-            <p class="price">7&nbsp;000&nbsp;€ <small>HT / an</small></p>
-            <p>Une collectivité, une instance. Le support est compris : installation, mises à jour, aide à la DSI. STELLARMEET fournit le logiciel, le maintient à jour, assure ce support, et ne conserve pas les conversations ni les fichiers des agents. L'usage d'une API est payé par la collectivité, sur son compte.</p>
+            <p class="eyebrow">Licence</p>
+            <div class="tarifs">
+              <article class="glass">
+                <p class="k">Sous 3&nbsp;500 utilisateurs</p>
+                <p class="price">0&nbsp;€</p>
+              </article>
+              <article class="glass">
+                <p class="k">Au-dessus</p>
+                <p class="price">7&nbsp;000&nbsp;€ <small>HT / an</small></p>
+              </article>
+            </div>
+            <p>Sous 3&nbsp;500 utilisateurs, 0&nbsp;€. Au-dessus, 7&nbsp;000&nbsp;€ HT par an, et ce prix ne change pas avec la taille. Support, mises à jour et maintenance compris. STELLARMEET fournit le logiciel et ne conserve pas les conversations ni les fichiers : ils restent sur le serveur de la collectivité. L'usage d'une API, s'il y en a une, est payé par la collectivité sur son compte.</p>
           </div>
           <ul class="ticks reveal d2">
             <li>Base de savoir, recherche, actualités, intranet</li>
             <li>Récap du matin pour les agents</li>
             <li>Image Docker et script d'installation</li>
-            <li>Support compris : installation, mises à jour, aide DSI</li>
+            <li>Support, mises à jour et maintenance compris</li>
           </ul>
         </div>
       </section>
@@ -292,6 +295,7 @@
           <a href="dpa.html">DPA</a>
           <a href="cookies.html">Cookies</a>
           <a href="blog/index.html">Blog</a>
+          <a href="ia-pour-mairie.html">IA pour mairie</a>
           <a href="https://legalbotik.fr">LegalBotik</a>
         </nav>
       </div>
