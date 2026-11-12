@@ -16,6 +16,7 @@
     <header class="nav">
       <a class="brand" href="index.html"><img src="favicon.svg" alt="" /> TerritoIA</a>
       <nav class="nav-links" aria-label="Principal">
+        <a href="#installation">Installation</a>
         <a href="#produit">Produit</a>
         <a href="#donnees">Données</a>
         <a href="#licence">Licence</a>
@@ -30,14 +31,15 @@
         <h1 class="reveal">L'assistant de la collectivité, installé chez elle.</h1>
         <p class="lead reveal">
           TerritoIA répond aux questions de droit, de RH, d'urbanisme, de
-          marchés publics et de finances locales. L'application tourne sur le
-          serveur de la DSI. La mairie apporte sa clé Mistral.
+          marchés publics et de finances locales. L'application tourne sur une
+          VM Linux de la DSI. La collectivité branche sa clé API, ou un modèle
+          Ollama local.
         </p>
         <ul class="pills">
-          <li>Serveur de la DSI</li>
-          <li>Clé Mistral de la mairie</li>
-          <li>Adresse interne</li>
-          <li>7&nbsp;000&nbsp;€ HT / an</li>
+          <li>VM Linux de la DSI</li>
+          <li>Script d'installation</li>
+          <li>Clé API ou Ollama</li>
+          <li>7&nbsp;000&nbsp;€ TTC / an</li>
           <li>Données sur place</li>
         </ul>
         <div class="actions">
@@ -66,7 +68,7 @@
           <div class="chip c3">Urbanisme<small>PLU, délais</small></div>
           <div class="chip c4">Marchés<small>seuils, MAPA</small></div>
           <div class="chip c5">Finances<small>DGF, FCTVA</small></div>
-          <div class="chip c6">Mistral<small>clé de la mairie</small></div>
+          <div class="chip c6">Modèle<small>clé ou Ollama</small></div>
           <div class="chip c7">Conseil<small>délibérations</small></div>
         </div>
       </section>
@@ -78,26 +80,46 @@
         </div>
       </div>
 
-      <section class="section wrap" id="produit">
-        <p class="eyebrow">Ce que la DSI installe</p>
-        <h2>Une adresse. Pas un logiciel sur chaque poste.</h2>
-        <div class="numbers">
+      <section class="section wrap" id="installation">
+        <p class="eyebrow">Côté DSI</p>
+        <h2>Quatre étapes pour installer.</h2>
+        <p class="sub">Une VM, le script livré avec la licence, puis la clé du fournisseur choisi. Docker doit déjà être là : le script ne l'installe pas.</p>
+        <div class="numbers steps">
           <article class="reveal">
             <span class="num">01</span>
-            <h3>Le serveur de la mairie</h3>
-            <p>Une machine Linux et Docker. L'image s'installe en une fois. Les conversations restent dans son volume.</p>
+            <h3>Une VM Linux</h3>
+            <p>Docker et Docker Compose sont installés avant le script. S'ils manquent, le script s'arrête.</p>
+          </article>
+          <article class="reveal d1">
+            <span class="num">02</span>
+            <h3>Le script d'installation</h3>
+            <p>Il charge l'image Docker fournie (fichier .tar) et démarre l'application avec Docker Compose. Le port par défaut est 3000, ensuite publié sur l'adresse interne.</p>
           </article>
           <article class="reveal d2">
-            <span class="num">02</span>
-            <h3>La clé de la collectivité</h3>
-            <p>Un compte Mistral pour la mairie. La clé est saisie dans les réglages, pas agent par agent.</p>
+            <span class="num">03</span>
+            <h3>Une clé API</h3>
+            <p>Dans les réglages : Mistral, Claude, ou un autre fournisseur. Une clé pour la collectivité, pas une par agent. L'usage est facturé par ce fournisseur.</p>
           </article>
           <article class="reveal d3">
-            <span class="num">03</span>
-            <h3>Les agents</h3>
-            <p>Ils ouvrent l'adresse interne, ou épinglent l'application depuis le navigateur.</p>
+            <span class="num">04</span>
+            <h3>Ollama, si pas d'API externe</h3>
+            <p>Une seconde VM peut porter les modèles locaux. Le script peut installer Ollama sous Linux et télécharger les modèles : comptez plusieurs minutes. Les questions restent sur cette VM.</p>
           </article>
         </div>
+        <aside class="quota reveal">
+          <h3>Plafond journalier</h3>
+          <ul>
+            <li>Le quota du compte (Mistral, Claude ou un autre) est réparti automatiquement.</li>
+            <li>Un plafond journalier est calculé pour chaque agent.</li>
+            <li>Il suit le quota réel du compte, pour qu'un agent ne brûle pas le stock de tokens de la collectivité.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section wrap" id="produit">
+        <p class="eyebrow">Pour les agents</p>
+        <h2>Une adresse. Pas un logiciel sur chaque poste.</h2>
+        <p class="sub">Ils ouvrent l'adresse interne, ou épinglent l'application depuis le navigateur. Les conversations restent dans le volume Docker de la DSI.</p>
         <div class="cards">
           <article class="reveal">
             <h3>Secrétariat</h3>
@@ -136,7 +158,7 @@
       <section class="section wrap" id="donnees">
         <p class="eyebrow">Où vont les données</p>
         <h2>Le dossier reste à la mairie.</h2>
-        <p class="sub">STELLARMEET n'héberge pas les conversations. Le texte d'une question part vers Mistral, avec la clé de la collectivité, le temps de produire la réponse.</p>
+        <p class="sub">STELLARMEET n'héberge pas les conversations. Le texte d'une question part vers le fournisseur choisi par la DSI, ou reste sur la VM Ollama si la collectivité est en mode local.</p>
         <div class="path">
           <article class="station reveal">
             <strong>Le poste</strong>
@@ -147,8 +169,8 @@
             <p>Comptes, conversations et fichiers déposés restent dans le volume Docker de la DSI.</p>
           </article>
           <article class="station reveal d3">
-            <strong>Mistral</strong>
-            <p>Le texte nécessaire à la réponse est envoyé au compte Mistral de la mairie, en Europe. La facture d'usage est la sienne.</p>
+            <strong>Le modèle</strong>
+            <p>En mode API, le texte nécessaire à la réponse part vers le compte choisi par la DSI : Mistral, Claude ou un autre. La facture d'usage est celle de la collectivité. En mode Ollama, ce texte reste sur la VM locale.</p>
           </article>
         </div>
         <p class="fine">Le détail est dans la <a href="confidentialite.html">politique de confidentialité</a> et le <a href="dpa.html">DPA</a>.</p>
@@ -158,14 +180,15 @@
         <div class="offer">
           <div class="reveal">
             <p class="eyebrow">Licence annuelle</p>
-            <p class="price">7&nbsp;000&nbsp;€ <small>HT / an</small></p>
-            <p>Une collectivité, une instance. L'installation, les mises à jour de l'image et l'identité de la mairie sont dans la licence. La consommation Mistral est payée par la collectivité, directement à Mistral.</p>
+            <p class="price">7&nbsp;000&nbsp;€ <small>TTC / an</small></p>
+            <p class="renew">Les trois premières années se renouvellent. Après, plus aucune durée n'est imposée.</p>
+            <p>Une collectivité, une instance. Le support est compris : installation, mises à jour, aide à la DSI. L'usage du modèle est payé par la collectivité, sur le compte du fournisseur qu'elle a choisi.</p>
           </div>
           <ul class="ticks reveal d2">
             <li>Application web pour l'ensemble des agents</li>
             <li>Image Docker et script d'installation</li>
             <li>Mises à jour sans effacer les conversations</li>
-            <li>Pas de carte graphique à acheter</li>
+            <li>Support compris : installation, mises à jour, aide DSI</li>
           </ul>
         </div>
       </section>
